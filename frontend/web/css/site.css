@@ -103,3 +103,52 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+
+
+#user_def_bg-white {
+    
+}
+
+#user_def_banner-1 {
+    background-image: url("../images/home_page_banner.jpg");
+    height:645px ;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#user_def_registration-panel-background{
+    background-color: rgba(0,0,0,0.7);
+    height: 435px;
+    width: auto;
+    background-position: center;
+    vertical-align: bottom
+}
+
+#user_def_fake-panel-background{
+    background-color: rgba(0,0,0,0);
+    height: 435px;
+    width: auto;
+    background-position: center;
+    vertical-align: bottom
+}
+
+.user_def_rounded-corners{
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.user_def_banner1-element-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
