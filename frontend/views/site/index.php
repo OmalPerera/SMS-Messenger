@@ -18,25 +18,34 @@ $this->title = 'My Yii Application';
                 <div class="col-lg-6 col-md-5 col-sm-4 col-xs-3">
                     <a href="index.php?r=site%2Flogin">
                         <button type="button" class="user_def_rounded-corners user_def_login-btn user_def_login-button-background">
-                        <p id="user_def_login-btn-typo">Login</p>
+                            <p id="user_def_login-btn-typo">Login</p>
                         </button>
                     </a>
                 </div>
             </div>
             
-            <div class="row">
-                <div class="col-lg-6 col-md-5 col-sm-3 col-xs-1">
-                    <div id="user_def_fake-panel-background">
+            
+            
+            
+            <div style="position: relative">
+                <div id="user_def_registration-panel-background" class="user_def_rounded-corners">
+                    <div>
+                        <p id="user_def_registration-form-header">Create your account for free!</p>
+                        <p id="user_def_registration-form-sub-header">Easy & quick account creation for everyone.</p>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-7 col-sm-9 col-xs-11">
-                    <div id="user_def_registration-panel-background" class="user_def_rounded-corners">
-                        <div class="conitainer">
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-addon" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                        </div>
-                        </div>
+                    <div style="vertical-align: middle; text-align: center; padding-top: 40px">
+                        <form>
+                            <input class="user_def_registration-panel-fields" type="text" name="emailAddress" placeholder="E-mail address">
+                            <br>
+                            <input class="user_def_registration-panel-fields" type="text" name="password" placeholder="Password">
+                            <br>
+                            <input class="user_def_registration-panel-fields" type="text" name="validatePassword" Placeholder="Validate Password">
+                            <br>
+                            <input class="user_def_registration-panel-fields" type="text" name="mobileNumber" placeholder="Mobile Number">
+                            <br>
+                            <input class="user_def_registration-panel-btn"type="submit" value="Register Now">
+                            <br>
+                        </form>
                     </div>
                 </div>
             </div>

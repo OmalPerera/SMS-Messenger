@@ -121,9 +121,15 @@ a.desc:after {
 #user_def_registration-panel-background{
     background-color: rgba(0,0,0,0.7);
     height: 435px;
-    width: auto;
-    background-position: center;
-    vertical-align: bottom
+    max-width: 520px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-right: 3%;
+    padding-bottom: 10px;
+    padding-top: 22px;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 #user_def_fake-panel-background{
@@ -183,3 +189,64 @@ img {
 }
 
 
+#user_def_registration-form-header {
+    color: #dddcdc;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+    letter-spacing: 1px;
+}
+
+
+#user_def_registration-form-sub-header {
+    color: #cacaca;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.user_def_registration-panel-fields {
+    height: 35px;
+    width: 320px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color:rgba(0,0,0,0);
+    padding-left: 10px;
+    font-size: 13px;
+    color: #eae9e9;
+    border-color: #899097;
+    border-style: solid;
+    outline-color: #03a9f4
+}
+
+::-webkit-input-placeholder {
+  color: #dadada;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #dadada;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #dadada;  
+}
+:-ms-input-placeholder {  
+  color: #dadada;  
+}
+
+
+.user_def_registration-panel-btn{
+    height: 35px;
+    width: 320px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color:rgba(179,184,187,0.8);
+    border-style: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #071117;
+}
