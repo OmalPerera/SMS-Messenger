@@ -7,10 +7,23 @@ $this->title = 'My Yii Application';
 <div>      
     <div id="user_def_banner-1">
         <div class="container-fluid">
+            
             <div class="row" style="height: 75px"></div>
-            <div>
-                <img src="../web/images/logo.png"/>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-sm-8 col-xs-9" style="text-align: center;">
+                    <img src="../web/images/logo.png" style="margin-right: 35px"/>
+                </div>
+                
+                <div class="col-lg-6 col-md-5 col-sm-4 col-xs-3">
+                    <a href="index.php?r=site%2Flogin">
+                        <button type="button" class="user_def_rounded-corners user_def_login-btn user_def_login-button-background">
+                        <p id="user_def_login-btn-typo">Login</p>
+                        </button>
+                    </a>
+                </div>
             </div>
+            
             <div class="row">
                 <div class="col-lg-6 col-md-5 col-sm-3 col-xs-1">
                     <div id="user_def_fake-panel-background">
