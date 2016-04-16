@@ -33,8 +33,8 @@ $this->title = 'My Yii Application';
                         <p id="user_def_registration-form-header">Create your account for free!</p>
                         <p id="user_def_registration-form-sub-header">Easy & quick account creation for everyone.</p>
                     </div>
-                    <div style="vertical-align: middle; text-align: center; padding-top: 40px">
-                        <form>
+                    <div style="vertical-align: middle; text-align: center; padding-top: 35px">
+                        <!--form>
                             <input class="user_def_registration-panel-fields" type="text" name="emailAddress" placeholder="E-mail address">
                             <br>
                             <input class="user_def_registration-panel-fields" type="text" name="password" placeholder="Password">
@@ -45,7 +45,41 @@ $this->title = 'My Yii Application';
                             <br>
                             <input class="user_def_registration-panel-btn"type="submit" value="Register Now">
                             <br>
-                        </form>
+                        </form-->
+                        
+                        <?php
+
+                            /* @var $this yii\web\View */
+                            /* @var $form yii\bootstrap\ActiveForm */
+                            /* @var $model \frontend\models\SignupForm */
+
+                            use yii\helpers\Html;
+                            use yii\bootstrap\ActiveForm;
+
+                            $this->title = 'SMS Messenger';
+                            $this->params['breadcrumbs'][] = $this->title;
+                        ?>
+                            <!--div class="site-signup">
+
+                                <div class="row">
+                                    <div class="col-lg-5"-->
+                                        <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+
+                                        <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+
+                                        <?= $form->field($model, 'email') ?>
+
+                                        <?= $form->field($model, 'password')->passwordInput() ?>
+
+                                        <!--div class="user_def_registration-panel-btn"-->
+                                            <?= Html::submitButton('Register Now', ['class' => 'user_def_registration-panel-btn', 'name' => 'signup-button']) ?>
+                                        <!--/div-->
+
+                                        <?php ActiveForm::end(); ?>
+                                    <!--/div>
+                                </div>
+                            </div-->
+
                     </div>
                 </div>
             </div>

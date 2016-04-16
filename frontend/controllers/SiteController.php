@@ -70,11 +70,15 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
+     *---------------------- Changed due to signup form is in the index page
+     *---------------------- 
     public function actionIndex()
     {
         return $this->render('index');
     }
-
+    */
+    
     /**
      * Logs in a user.
      *
@@ -146,7 +150,7 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionSignup()
+    public function actionIndex()
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
@@ -157,9 +161,9 @@ class SiteController extends Controller
             }
         }
 
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
+        //return $this->render('signup', ['model' => $model,]);
+        return $this->render('index', ['model' => $model,]);
+    
     }
 
     /**
@@ -210,4 +214,21 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
+    
+    
+/*    
+    public function actionRegonindex()
+    {   
+        //$model = new();
+        $model = new SignupForm();
+        if($model->load(Yii::$app->request->post()) && $model->validate())
+        {   
+        }else{
+            return $this->render('regonindex', ['model' => $model,]);
+        }
+        
+    }
+*/    
+    
 }

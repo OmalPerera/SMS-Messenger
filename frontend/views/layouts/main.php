@@ -26,15 +26,18 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <!--?php
+<?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => '',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
+        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -54,7 +57,7 @@ AppAsset::register($this);
         'items' => $menuItems,
     ]);
     NavBar::end();
-    ?-->
+    ?>
 
     <div>
         <?= $content ?>
