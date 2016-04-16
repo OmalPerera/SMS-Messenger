@@ -210,7 +210,7 @@ img {
 .user_def_registration-panel-fields {
     height: 35px;
     width: 320px;
-    margin-bottom: 10px;
+    margin-bottom: -3px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
@@ -224,16 +224,16 @@ img {
 }
 
 ::-webkit-input-placeholder {
-  color: #dadada;
+  color: #c7c7c7;
 }
 :-moz-placeholder { /* Firefox 18- */
-  color: #dadada;  
+  color: #c7c7c7;  
 }
 ::-moz-placeholder {  /* Firefox 19+ */
-  color: #dadada;  
+  color: #c7c7c7;  
 }
 :-ms-input-placeholder {  
-  color: #dadada;  
+  color: #c7c7c7;  
 }
 
 
