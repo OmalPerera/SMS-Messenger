@@ -153,6 +153,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = new SignupForm();
+        $this->layout = 'main_modified';
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {

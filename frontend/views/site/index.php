@@ -68,7 +68,7 @@ $this->title = 'My Yii Application';
                                         <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>'user_def_registration-panel-fields', 'placeholder'=>'User name'])->label(false) ?>
                                         <?= $form->field($model, 'email')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'E-mail address'])->label(false) ?>
                                         <?= $form->field($model, 'password')->passwordInput()->textInput(['class'=>'user_def_registration-panel-fields','placeholder'=>'Password'])->label(false) ?>
-                                        <!--?= $form->field($model, 'mobilenumber')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
+                                        <?= $form->field($model, 'mobilenumber')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
                                         
                                         <!--div class="user_def_registration-panel-btn"-->
                                             <?= Html::submitButton('Register Now', ['class' => 'user_def_registration-panel-btn', 'name' => 'signup-button']) ?>
