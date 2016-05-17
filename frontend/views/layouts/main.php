@@ -26,9 +26,9 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-<?php
+    <?php
     NavBar::begin([
-        'brandLabel' => '',
+        'brandLabel' => 'SMS Messenger',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -59,7 +59,11 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div>
+    <div class="container">
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
         <?= $content ?>
     </div>
 </div>

@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'SMS Messenger';
 ?>
 <div>      
     <div id="user_def_banner-1">
@@ -34,18 +34,7 @@ $this->title = 'My Yii Application';
                         <p id="user_def_registration-form-sub-header">Easy & quick account creation for everyone.</p>
                     </div>
                     <div style="vertical-align: middle; text-align: center; padding-top: 35px">
-                        <!--form>
-                            <input class="user_def_registration-panel-fields" type="text" name="emailAddress" placeholder="E-mail address">
-                            <br>
-                            <input class="user_def_registration-panel-fields" type="text" name="password" placeholder="Password">
-                            <br>
-                            <input class="user_def_registration-panel-fields" type="text" name="validatePassword" Placeholder="Validate Password">
-                            <br>
-                            <input class="user_def_registration-panel-fields" type="text" name="mobileNumber" placeholder="Mobile Number">
-                            <br>
-                            <input class="user_def_registration-panel-btn"type="submit" value="Register Now">
-                            <br>
-                        </form-->
+
                         
                         <?php
 
@@ -68,7 +57,7 @@ $this->title = 'My Yii Application';
                                         <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>'user_def_registration-panel-fields', 'placeholder'=>'User name'])->label(false) ?>
                                         <?= $form->field($model, 'email')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'E-mail address'])->label(false) ?>
                                         <?= $form->field($model, 'password')->passwordInput()->textInput(['class'=>'user_def_registration-panel-fields','placeholder'=>'Password'])->label(false) ?>
-                                        <!--?= $form->field($model, 'mobilenumber')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
+                                        <?= $form->field($model, 'user_phone_number')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
                                         
                                         <!--div class="user_def_registration-panel-btn"-->
                                             <?= Html::submitButton('Register Now', ['class' => 'user_def_registration-panel-btn', 'name' => 'signup-button']) ?>

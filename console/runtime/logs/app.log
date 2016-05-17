@@ -1,0 +1,255 @@
+2016-04-14 04:38:08 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No such file or directory' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-04-14 04:38:07 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/1x/nc6lqp3s71594gqtgzzr8glc0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.9PRtOoyxnh/Render'
+    'TERM_PROGRAM_VERSION' => '361'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'TERM_SESSION_ID' => '32FFB113-8AFC-4B83-AE31-744703E8FD1A'
+    'USER' => 'Omal'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FKzIzYbxRY/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin'
+    'PWD' => '/Applications/MAMP/htdocs/SMS-Messenger_Backend'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/Omal'
+    'LOGNAME' => 'Omal'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1460608687.7705
+    'REQUEST_TIME' => 1460608687
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-04-14 04:45:50 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-04-14 04:45:50 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/1x/nc6lqp3s71594gqtgzzr8glc0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.9PRtOoyxnh/Render'
+    'TERM_PROGRAM_VERSION' => '361'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'TERM_SESSION_ID' => '32FFB113-8AFC-4B83-AE31-744703E8FD1A'
+    'USER' => 'Omal'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FKzIzYbxRY/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin'
+    'PWD' => '/Applications/MAMP/htdocs/SMS-Messenger_Backend'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/Omal'
+    'LOGNAME' => 'Omal'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1460609150.7188
+    'REQUEST_TIME' => 1460609150
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-04-14 04:52:44 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#20 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(858): yii\db\Connection->open()
+#1 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(834): yii\db\Command->prepare(true)
+#4 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/MigrateController.php(132): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(680): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(123): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#15 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#17 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#18 /Applications/MAMP/htdocs/SMS-Messenger_Backend/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /Applications/MAMP/htdocs/SMS-Messenger_Backend/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-04-14 04:52:43 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/1x/nc6lqp3s71594gqtgzzr8glc0000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.9PRtOoyxnh/Render'
+    'TERM_PROGRAM_VERSION' => '361'
+    'OLDPWD' => '/Applications/MAMP/htdocs'
+    'TERM_SESSION_ID' => '32FFB113-8AFC-4B83-AE31-744703E8FD1A'
+    'USER' => 'Omal'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.FKzIzYbxRY/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin'
+    'PWD' => '/Applications/MAMP/htdocs/SMS-Messenger_Backend'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/Omal'
+    'LOGNAME' => 'Omal'
+    'LC_CTYPE' => 'UTF-8'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1460609563.9888
+    'REQUEST_TIME' => 1460609563
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
