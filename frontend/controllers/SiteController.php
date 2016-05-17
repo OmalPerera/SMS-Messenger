@@ -70,11 +70,15 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    /*
+     *---------------------- Changed due to signup form is in the index page
+     *---------------------- 
     public function actionIndex()
     {
         return $this->render('index');
     }
-
+    */
+    
     /**
      * Logs in a user.
      *
@@ -141,25 +145,33 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+
+
     /**
      * Signs user up.
      *
      * @return mixed
      */
-    public function actionSignup()
+    public function actionIndex()
     {
-        $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post())) {
-            if ($user = $model->signup()) {
-                if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
+        if (!\Yii::$app->user->isGuest) {
+            //return $this->redirect('index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params');
+            return $this->render('introduction');
+        }else{
+
+            $model = new SignupForm();
+            $this->layout = 'main_modified';
+            if ($model->load(Yii::$app->request->post())) {
+                if ($user = $model->signup()) {
+                    if (Yii::$app->getUser()->login($user)) {
+                        return $this->goHome();
+                    }
                 }
             }
-        }
 
-        return $this->render('signup', [
-            'model' => $model,
-        ]);
+            //return $this->render('signup', ['model' => $model,]);
+            return $this->render('index', ['model' => $model,]);
+        }
     }
 
     /**
@@ -210,4 +222,21 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+    
+    
+    
+/*    
+    public function actionRegonindex()
+    {   
+        //$model = new();
+        $model = new SignupForm();
+        if($model->load(Yii::$app->request->post()) && $model->validate())
+        {   
+        }else{
+            return $this->render('regonindex', ['model' => $model,]);
+        }
+        
+    }
+*/    
+    
 }

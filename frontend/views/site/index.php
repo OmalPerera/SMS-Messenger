@@ -2,52 +2,78 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'SMS Messenger';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+<div>      
+    <div id="user_def_banner-1">
+        <div class="container-fluid">
+            
+            <div class="row" style="height: 75px"></div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-sm-8 col-xs-9" style="text-align: center;">
+                    <img src="../web/images/logo.png" style="margin-right: 35px"/>
+                </div>
+                
+                <div class="col-lg-6 col-md-5 col-sm-4 col-xs-3">
+                    <a href="index.php?r=site%2Flogin">
+                        <button type="button" class="user_def_rounded-corners user_def_login-btn user_def_login-button-background">
+                            <p id="user_def_login-btn-typo">Login</p>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            
+            
+            
+            
+            <div style="position: relative">
+                <div id="user_def_registration-panel-background" class="user_def_rounded-corners">
+                    <div>
+                        <p id="user_def_registration-form-header">Create your account for free!</p>
+                        <p id="user_def_registration-form-sub-header">Easy & quick account creation for everyone.</p>
+                    </div>
+                    <div style="vertical-align: middle; text-align: center; padding-top: 35px">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                        
+                        <?php
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                            /* @var $this yii\web\View */
+                            /* @var $form yii\bootstrap\ActiveForm */
+                            /* @var $model \frontend\models\SignupForm */
+
+                            use yii\helpers\Html;
+                            use yii\bootstrap\ActiveForm;
+
+                            $this->title = 'SMS Messenger';
+                            $this->params['breadcrumbs'][] = $this->title;
+                        ?>
+                            <!--div class="site-signup">
+
+                                <div class="row">
+                                    <div class="col-lg-5"-->
+                                        <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+
+                                        <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>'user_def_registration-panel-fields', 'placeholder'=>'User name'])->label(false) ?>
+                                        <?= $form->field($model, 'email')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'E-mail address'])->label(false) ?>
+                                        <?= $form->field($model, 'password')->passwordInput()->textInput(['class'=>'user_def_registration-panel-fields','placeholder'=>'Password'])->label(false) ?>
+                                        <?= $form->field($model, 'user_phone_number')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
+                                        
+                                        <!--div class="user_def_registration-panel-btn"-->
+                                            <?= Html::submitButton('Register Now', ['class' => 'user_def_registration-panel-btn', 'name' => 'signup-button']) ?>
+                                        <!--/div-->
+
+                                        <?php ActiveForm::end(); ?>
+                                    <!--/div>
+                                </div>
+                            </div-->
+
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+            
         </div>
-
     </div>
-</div>
+</div> 
+
+

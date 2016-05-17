@@ -103,3 +103,150 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+
+
+#user_def_bg-white {
+    
+}
+
+#user_def_banner-1 {
+    background-image: url("../images/home_page_banner.jpg");
+    height:645px ;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#user_def_registration-panel-background{
+    background-color: rgba(0,0,0,0.7);
+    height: 435px;
+    max-width: 520px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-right: 3%;
+    padding-bottom: 10px;
+    padding-top: 22px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+#user_def_fake-panel-background{
+    background-color: rgba(0,0,0,0);
+    height: 435px;
+    width: auto;
+    background-position: center;
+    vertical-align: bottom
+}
+
+.user_def_rounded-corners{
+    -webkit-border-radius: 20px 20px 20px 20px;
+    -moz-border-radius:20px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.user_def_login-button-background {
+    background-color: rgba(0,0,0,0.9);
+    height: 42px;
+    width: 85px;
+    position: absolute;
+    right: 11%;
+    top: 3px;
+    border: 0px;
+    outline: none;
+    text-align: center;
+    
+}
+
+.user_def_login-button-background:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#user_def_login-btn-typo {
+    font-weight: lighter;
+    color:#ffffff;
+    font-family:"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:24px;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    margin-left: 2px
+}
+
+
+.user_def_banner1-element-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+
+#user_def_registration-form-header {
+    color: #dddcdc;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+    letter-spacing: 1px;
+}
+
+
+#user_def_registration-form-sub-header {
+    color: #cacaca;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+}
+
+.user_def_registration-panel-fields {
+    height: 35px;
+    width: 320px;
+    margin-bottom: -3px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color:rgba(0,0,0,0);
+    padding-left: 10px;
+    font-size: 13px;
+    color: #eae9e9;
+    border-color: #899097;
+    border-style: solid;
+    outline-color: #03a9f4
+}
+
+::-webkit-input-placeholder {
+  color: #c7c7c7;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #c7c7c7;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #c7c7c7;  
+}
+:-ms-input-placeholder {  
+  color: #c7c7c7;  
+}
+
+
+.user_def_registration-panel-btn{
+    height: 35px;
+    width: 320px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color:rgba(179,184,187,0.8);
+    border-style: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #071117;
+}
