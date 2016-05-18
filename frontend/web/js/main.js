@@ -11,6 +11,19 @@ $(function(){
 	});
 
 
+
+	/*	redirects to the recipient list	
+		introduction.php in site view
+	*/
+	$('#manage_groups_button').click(function (){
+		//alert('sdfghj');
+		var url = $("#manage_groups_button").val();
+		$(location).attr('href', url);
+	});
+
+
+
+
 	/*	loads Bootstrap model to create a recipient
 		Used in the recipient-list index view 
 	*/
