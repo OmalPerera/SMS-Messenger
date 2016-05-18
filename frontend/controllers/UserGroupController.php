@@ -67,7 +67,9 @@ class UserGroupController extends Controller
             $model->group_owner_id = Yii::$app->user->identity->id; 
             $model->group_registration_date = date('Y-m-d h:m:s');
             $model->save();
-            return $this->redirect(['view', 'id' => $model->group_id]);
+
+            //After a user create a new group redirects to corresponding recipient list page  
+            return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $model->group_id]);
         } else {
             return $this->renderAjax('create', [
                 'model' => $model,
