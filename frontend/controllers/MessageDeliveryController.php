@@ -8,6 +8,7 @@ use frontend\models\MessageDeliverySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * MessageDeliveryController implements the CRUD actions for MessageDelivery model.
@@ -17,6 +18,16 @@ class MessageDeliveryController extends Controller
     public function behaviors()
     {
         return [
+        
+            'access' => [
+                'class' => AccessControl::classname(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@']
+                    ],
+                ]
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [

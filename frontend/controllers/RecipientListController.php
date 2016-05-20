@@ -8,6 +8,7 @@ use frontend\models\RecipientListSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * RecipientListController implements the CRUD actions for RecipientList model.
@@ -17,6 +18,16 @@ class RecipientListController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::classname(),
+                //'only' => ['create', 'update', 'delete', 'view', 'search'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@']
+                    ],
+                ]
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -34,9 +45,9 @@ class RecipientListController extends Controller
 
         $searchModel = new RecipientListSearch();
 
-        // We get the params from GET request
+        // Get the params from GET request
         $params = Yii::$app->request->queryParams;
-        // we parse them to /app/model/ModelSearch::search() 
+        // Parse them to /app/model/ModelSearch::search() 
         $dataProvider = $searchModel->search($params);
 
 
@@ -127,7 +138,10 @@ class RecipientListController extends Controller
             $model->group_id = $currently_selected_group_id;    //currently selected group id is automatically inserted into the recipient_list.group_id column in database
             $session_group_id->destroy();                       //'session_group_id' destroyed because it is not needed furthur more.
             $model->save();
-            return $this->redirect(['view', 'id' => $model->recipient_list_id]);
+             
+            return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $currently_selected_group_id]);
+           
+
         } else {
             return $this->renderAjax('create', [
                 'model' => $model,
@@ -164,7 +178,8 @@ class RecipientListController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        //return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $currently_selected_group_id]);
+           
         return $this->redirect(['index']);
     }
 

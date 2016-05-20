@@ -70,6 +70,7 @@ $this->title = 'SMS Messenger';
                 
             }else{
                 $first_group_id = $group_id_array["0"]["group_id"];
+                $_SESSION[$first_group_id] = $first_group_id;
                 //echo "$first_group_id";
                 $redirecting_url = "?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params="."$first_group_id";
 
