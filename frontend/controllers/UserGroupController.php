@@ -8,6 +8,7 @@ use frontend\models\UserGroupSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * UserGroupController implements the CRUD actions for UserGroup model.
@@ -17,6 +18,15 @@ class UserGroupController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::classname(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@']
+                    ],
+                ]
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -105,8 +115,9 @@ class UserGroupController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        $redirecting_url = "index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params"."$_SESSION[$first_group_id]";
+        return $this->redirect($redirecting_url);
+        //return $this->redirect(['index']);
     }
 
     /**

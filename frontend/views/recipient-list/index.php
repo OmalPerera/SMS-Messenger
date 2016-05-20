@@ -70,9 +70,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
                 -->
 
-                <p>
-                    <?= Html::button('Add a recipient', ['value'=>Url::to('index.php?r=recipient-list/create'),'class' => 'btn btn-primary', 'id'=>'create_recipient_button']) ?>
-                </p>
+                <?= Html::button('Add a recipient', ['value'=>Url::to('index.php?r=recipient-list/create'),'class' => 'btn btn-primary', 'id'=>'create_recipient_button', 'style' =>  'cursor:pointer; position:absolute; right: 10%;']) ?>
+                
 
 
                 <!-- Uses for popup form to create recipient -->
