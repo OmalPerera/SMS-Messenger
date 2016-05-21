@@ -20,7 +20,6 @@ class RecipientListController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::classname(),
-                //'only' => ['create', 'update', 'delete', 'view', 'search'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -61,7 +60,7 @@ class RecipientListController extends Controller
             //print_r($currently_selected_group_id);
             $session_group_id['grou_id'] = $currently_selected_group_id;
 
-
+        $this->layout = 'recipient_ui';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

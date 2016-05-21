@@ -117,7 +117,7 @@ class NavBar extends Widget
         }
         echo $this->renderToggleButton();
         if ($this->brandLabel !== false) {
-            Html::addCssClass($this->brandOptions, ['widget' => 'navbar-brand']);
+            Html::addCssClass($this->brandOptions, ['widget' => 'user_def_navbar-brand navbar-brand']);
             echo Html::a($this->brandLabel, $this->brandUrl === false ? Yii::$app->homeUrl : $this->brandUrl, $this->brandOptions);
         }
         echo Html::endTag('div');

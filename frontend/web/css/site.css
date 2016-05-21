@@ -250,3 +250,60 @@ img {
     font-size: 16px;
     color: #071117;
 }
+
+
+.user_def_navbar{
+    background-color: #075a9b;
+    border-color: #075a9b;
+}
+
+.user_def_navbar-brand{
+    color: #ebebeb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++ Styles in Recipient List page ++++++++++++++++++++++++ */
+
+
+.user_def_recipient-list-index-top-banner-div{
+    height: 100px; 
+    width: 90%;
+    background-color: #075a9b;
+    
+}
+
+.user_def_recipient-list-index-top-banner-text{
+    font-size: 14px; 
+    color: #ffffff; 
+    padding-left: 20px; 
+    padding-top: 20px; 
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.user_def_recipient-list-index-top-banner-create-group-button{
+    background-color: Transparent; 
+    background-repeat: no-repeat; 
+    border: none; 
+    cursor: pointer; 
+    overflow: hidden; 
+    outline: none; 
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px;
+}
+
+.user_def_recipient-list-index-recipient-gridview{
+    width: 90%;
+}
+
+
+.user_def_recipient-list-row-option{
+    background-color: #f9f9f9;
+}
