@@ -31,7 +31,7 @@ AppAsset::register($this);
         'brandLabel' => 'SMS Messenger',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'user_def_navbar navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [

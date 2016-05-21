@@ -10006,3 +10006,62 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2016-05-21 12:50:34 [::1][1][0c22625182ceece426dfc63ed575c6b6][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''class'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in /Applications/MAMP/htdocs/sec/SMS-Messenger/frontend/views/layouts/main.php:35
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-21 12:50:34 [::1][1][0c22625182ceece426dfc63ed575c6b6][info][application] $_GET = [
+    'r' => 'recipient-list/recipients'
+    'scenario' => 'RECIPIENTS'
+    'params' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'ed6d89aee49cdea9be7cbfe3db5499217a88f1cb44fda85bdc5f121bb7ef67e3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ZRQrtgkomW1mV9qr3pBmA7TRcnfAFTZS\";}'
+    'PHPSESSID' => '0c22625182ceece426dfc63ed575c6b6'
+    'SQLiteManager_currentLangue' => '2'
+    '_identity' => '62133f479c58ea07d2760de4a8f36727ab2640c1f0782a5b44e94cd1aab345eda:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"057znzCUQzE1BByP6l972Iyd_mfBJAIi\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'grou_id' => '1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/SMS-Messenger/frontend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=ed6d89aee49cdea9be7cbfe3db5499217a88f1cb44fda85bdc5f121bb7ef67e3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ZRQrtgkomW1mV9qr3pBmA7TRcnfAFTZS%22%3B%7D; PHPSESSID=0c22625182ceece426dfc63ed575c6b6; SQLiteManager_currentLangue=2; _identity=62133f479c58ea07d2760de4a8f36727ab2640c1f0782a5b44e94cd1aab345eda%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22057znzCUQzE1BByP6l972Iyd_mfBJAIi%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zg DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/SMS-Messenger/frontend/web/index.php'
+    'REMOTE_PORT' => '50843'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=1'
+    'REQUEST_URI' => '/sec/SMS-Messenger/frontend/web/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=1'
+    'SCRIPT_NAME' => '/sec/SMS-Messenger/frontend/web/index.php'
+    'PHP_SELF' => '/sec/SMS-Messenger/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463827834.75
+    'REQUEST_TIME' => 1463827834
+    'argv' => [
+        0 => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=1'
+    ]
+    'argc' => 1
+]
