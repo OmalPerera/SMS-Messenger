@@ -16,7 +16,7 @@ $this->title = 'User Groups';
 $this->params['breadcrumbs'][] = $this->title;
 */
 ?>
-<div class="user-group-index">
+<div class="user-group-index" style="padding-left:10px; padding-right:10px">
 
     <!--h1><?= Html::encode($this->title) ?></h1-->
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'summary'=>"",
         'showHeader' => false,
         'tableOptions' => ['class' => 'table table-hover'],
+        'rowOptions' => ['class' => 'user_def_groups-list-row-option'],
         // to show table border   'tableOptions' => ['class' => 'table-bordered']
 
         //'filterModel' => $searchModel,
@@ -47,7 +48,8 @@ $this->params['breadcrumbs'][] = $this->title;
             //'group_owner_id',
             'group_name',
             //'group_registration_date',
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+            'visibleButtons' => ['view' => false],],
         ],
     ]); ?>
     <?php Pjax::end(); ?>

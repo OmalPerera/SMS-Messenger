@@ -50,6 +50,8 @@ class UserGroupController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+
+
     }
 
     /**
@@ -115,9 +117,13 @@ class UserGroupController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-        $redirecting_url = "index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params"."$_SESSION[$first_group_id]";
-        return $this->redirect($redirecting_url);
-        //return $this->redirect(['index']);
+
+
+        $session_first_group_id = Yii::$app->session;
+        $session_first_group_id->open();
+        $redi_group_id = $session_first_group_id['group_id'];
+        return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $redi_group_id]);
+        
     }
 
     /**
