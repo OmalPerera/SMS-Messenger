@@ -5,6 +5,7 @@ use yii\grid\GridView;
 use yii\helpers\Url;
 use yii\bootstrap\Modal;
 use yii\widgets\Pjax;
+use yii\bootstrap\ActiveForm;
 
 
 /* @var $this yii\web\View */
@@ -17,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 */
 ?>
 
-<div class="recipient-list-index row" style="margin-left:1px ; ">
+<div class="recipient-list-index row" style="margin-left:5px ; ">
 
     <!-- ************** START : Top row with the banner ************** -->
         <div class="row" style="padding-bottom:30px;">
@@ -62,8 +63,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- ************** START : row with User-Group list & corresponding recipient list ************** -->
 
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <h3>hello</h3>
+            <div class="col-lg-3 col-md-3 col-sm-3" style="padding-right: 40px;">
+                <h4 class="user_def_group_heading">Groups</h4>
                 <?php Pjax::begin(); ?>
                     <div id="group_list"></div>
                 <?php Pjax::end(); ?>
@@ -81,7 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'value'=>Url::to('index.php?r=recipient-list/create'),
                             'class' => 'btn btn-primary', 
                             'id'=>'create_recipient_button', 
-                            'style' =>  'cursor:pointer; position:absolute; right: 10%;'
+                            'style' =>  'cursor:pointer; position:absolute; right: 10%; background-color: #075a9b;'
                         ]
                     ) ?>
                     
@@ -98,7 +99,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             Modal::end();
                         ?>
                     <!-- *************************************** -->
-                    
                     <?= GridView::widget([
                         'dataProvider' => $dataProvider,
                         //'filterModel' => $searchModel,
@@ -115,15 +115,14 @@ $this->params['breadcrumbs'][] = $this->title;
                             //'group_id',
                             'recipient_name',
                             'recipient_phone_number',
-                            ['class' => 'yii\grid\ActionColumn'],
+                            ['class' => 'yii\grid\ActionColumn',
+                                'visibleButtons' => ['view' => false],
+                            ]
                         ],
                     ]); ?>
 
 
-                    <p>
-                        <?= Html::input(['id'=>'msg_input', 'style' => 'width: 200px;']) ?>
-                        <?= Html::button('SEND', ['class' => 'btn btn-primary', 'id'=>'msg_send_button']) ?>
-                    </p>
+                    
                     
                 </div>
             </div>
@@ -131,6 +130,33 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     <!-- ************** END : row with User-Group list & corresponding recipient list ************** -->
 
+
+        
+
+            
+        <div class="navbar-fixed-bottom row" style="height: 100px" >
+            <div class="col-lg-3 col-md-3 col-sm-3">
+            </div>
+
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="user_def_message_div">
+
+
+
+                    <?php $form = ActiveForm::begin(['id' => 'downloadSourceCode']); ?>
+                        <div class="row" style="text-align:center">
+                            <div class="col-lg-10 col-md-10 col-lsm-10 col-xs-10 ">
+                                <?= Html::textArea('downloadSourceCode',"",['id'=>'downloadSourceCode', 'placeholder'=>'Say something...', 'class'=>'user_def_msg-input']); ?>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <?= Html::submitButton('SEND', ['class' => 'btn btn-primary user_def_msg-send-button', 'id'=>'msg_send_button']) ?>
+                            </div>
+                        </div>
+                    <?php ActiveForm::end(); ?>
+                </div>
+            </div>
+        </div>
+    
 
                 
 

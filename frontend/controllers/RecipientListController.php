@@ -178,7 +178,11 @@ class RecipientListController extends Controller
     {
         $this->findModel($id)->delete();
         //return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $currently_selected_group_id]);
-           
+         
+        //$session_first_group_id = Yii::$app->session;
+        //$session_first_group_id->open();
+        $redi_group_id = $$session_group_id['grou_id'];
+          
         return $this->redirect(['index']);
     }
 

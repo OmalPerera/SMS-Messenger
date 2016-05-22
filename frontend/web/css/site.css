@@ -300,10 +300,49 @@ img {
 }
 
 .user_def_recipient-list-index-recipient-gridview{
-    width: 90%;
+    width: 91%;
+    padding-bottom: 8em;
 }
 
 
 .user_def_recipient-list-row-option{
     background-color: #f9f9f9;
+}
+
+.user_def_msg-input{
+    width: 100%;
+    height: 4em;
+    max-width: 100%;
+    max-height: 4em;
+    border: none;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+}
+
+.user_def_msg-send-button{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: #075a9b;
+}
+
+.user_def_group_heading{
+    color: #333333;
+    padding-top: 20px; 
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.user_def_groups-list-row-option{
+    background-color: #f9f9f9;
+}
+
+.user_def_message_div{
+    background-color:#ffffff; 
+    border:2px solid #cccccc;
+    width: 92%;
+    height: 5em;
 }
