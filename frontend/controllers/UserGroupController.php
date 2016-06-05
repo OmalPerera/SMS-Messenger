@@ -77,7 +77,7 @@ class UserGroupController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $model->group_owner_id = Yii::$app->user->identity->id; 
-            $model->group_registration_date = date('Y-m-d h:m:s');
+            $model->group_registration_date = date('Y-m-d H:i:s');
             $model->save();
 
             //After a user create a new group redirects to corresponding recipient list page  

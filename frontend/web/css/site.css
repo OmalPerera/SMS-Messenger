@@ -346,3 +346,8 @@ img {
     width: 92%;
     height: 5em;
 }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #06497D;
+}

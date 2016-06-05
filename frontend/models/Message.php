@@ -33,12 +33,11 @@ class Message extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['message_id', 'message_subject', 'message_body', 'message_create_date', 'message_author_id'], 'required'],
-            [['message_id', 'message_author_id'], 'integer'],
+            [['message_subject', 'message_body', 'message_create_date', 'message_author_id'], 'required'],
             [['message_create_date'], 'safe'],
+            [['message_author_id'], 'integer'],
             [['message_subject'], 'string', 'max' => 300],
-            [['message_body'], 'string', 'max' => 500],
-            [['message_id'], 'unique']
+            [['message_body'], 'string', 'max' => 500]
         ];
     }
 
