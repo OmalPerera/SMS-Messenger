@@ -72,7 +72,13 @@ class MessageController extends Controller
     {
         $model = new Message();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->message_author_id = Yii::$app->user->identity->id; 
+            $model->message_create_date = date('Y-m-d H:i:s');
+            $model->message_subject = 'msg1';
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->message_id]);
         } else {
             return $this->render('create', [

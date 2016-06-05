@@ -15,6 +15,7 @@ use yii\filters\AccessControl;
  */
 class RecipientListController extends Controller
 {
+
     public function behaviors()
     {
         return [

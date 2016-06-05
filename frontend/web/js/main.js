@@ -36,7 +36,19 @@ $(function(){
 
 
 	$('#msg_send_button').click(function () {
-		var keys = $('#recipient_list_grid').yiiGridView('getSelectedRows'); // returns an array of pkeys, and #grid is your grid element id
+		var message = document.getElementById('user_msg_input').value;
+
+		if (message){
+			//alert(message);
+			var selected_recipient_id = $('#recipient_list_grid').yiiGridView('getSelectedRows'); // returns an array of pkeys, and #grid is your grid element id
+			alert(selected_recipient_id);
+		}else{
+			//alert('Please Enter a Valid Message');
+		}
+
+
+		
+
 	    /*$.post({
 	       url: '/site/calculate-total', // your controller action
 	       dataType: 'json',
@@ -48,7 +60,8 @@ $(function(){
 	       },
 	    });*/
 
-		alert(keys);
+		//alert(selected_recipient_id);
+		
 	});
 
 
