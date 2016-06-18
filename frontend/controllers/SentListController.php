@@ -15,6 +15,10 @@ use yii\filters\AccessControl;
  */
 class SentListController extends Controller
 {
+
+
+
+
     public function behaviors()
     {
         return [
@@ -35,6 +39,33 @@ class SentListController extends Controller
             ],
         ];
     }
+
+/*
+    public function actionTest(){
+
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+            //print_r($data);
+
+        }
+
+
+        return $this->render('test');
+        /*
+        if(Yii::app()->request->isPostRequest)
+          {
+            if(isset($_POST['keylist']) && $_POST['keylist']!=''){
+                $data = keylist;
+               print_r(json_encode($data));
+            
+            }
+          }
+          else{
+           throw new NotFoundHttpException('The requested page does not exist.');
+         }
+         
+    }
+*/
 
     /**
      * Lists all SentList models.
@@ -68,17 +99,41 @@ class SentListController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
     public function actionCreate()
     {
-        $model = new SentList();
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+            //print_r($data['keylist']['0']);
+            //$recipient_id = $data['keylist']['0'];
+            //echo $recipient_id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $recipient_id = implode(",",$data['keylist']);
+            echo $recipient_id;
+
+
+            $model = new SentList();
+            $model->recipient_phone_number = $recipient_id;
+            $model->save();
+
+            //return $this->redirect(['view', 'id' => $model->sent_list_id]);
+
+        }
+ 
+ /*       $model = new SentList();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->recipient_phone_number = $data;
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->sent_list_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
+        */
+        
     }
 
     /**

@@ -13,9 +13,9 @@ use Yii;
  * @property integer $message_sent_list
  * @property integer $delivery_id
  *
+ * @property SentList $messageSentList
  * @property Message $message
  * @property MessageDelivery $delivery
- * @property SentList $sentList
  */
 class MessageHistory extends \yii\db\ActiveRecord
 {
@@ -57,6 +57,14 @@ class MessageHistory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getMessageSentList()
+    {
+        return $this->hasOne(SentList::className(), ['sent_list_id' => 'message_sent_list']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getMessage()
     {
         return $this->hasOne(Message::className(), ['message_id' => 'message_id']);
@@ -68,13 +76,5 @@ class MessageHistory extends \yii\db\ActiveRecord
     public function getDelivery()
     {
         return $this->hasOne(MessageDelivery::className(), ['delivery_id' => 'delivery_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getSentList()
-    {
-        return $this->hasOne(SentList::className(), ['sent_list_id' => 'message_sent_list']);
     }
 }
