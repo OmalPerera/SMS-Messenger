@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\db\Query;
 
 /**
  * MessageController implements the CRUD actions for Message model.
@@ -42,8 +43,10 @@ class MessageController extends Controller
      */
     public function actionIndex()
     {
+
         $searchModel = new MessageSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //filters the records by user id (currently logged user)
+        $dataProvider = $searchModel->search([$searchModel->formName()=>['message_author_id'=> Yii::$app->user->identity->id ]]);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -95,6 +98,7 @@ class MessageController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -128,7 +132,19 @@ class MessageController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = Message::findOne($id)) !== null) {
+
+        /*
+        * allows only the logged users to View, Update, delete the records
+        */
+        $query = new Query;
+        $query  ->select('message_author_id')
+                ->from('message')                               
+                ->where(['message_id' => $id]);
+
+        $logged_user_id = $query->one();
+        //print_r($logged_user_id['message_author_id']);
+
+        if (($model = Message::findOne($id)) !== null && Yii::$app->user->identity->id == $logged_user_id['message_author_id']) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
