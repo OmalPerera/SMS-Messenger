@@ -8,9 +8,9 @@ use Yii;
  * This is the model class for table "message_history".
  *
  * @property integer $history_log_id
- * @property integer $message_id
- * @property integer $message_sent_list
- * @property integer $delivery_id
+ * @property string $message_id
+ * @property string $message_sent_list
+ * @property string $delivery_id
  *
  * @property Message $message
  * @property MessageDelivery $delivery
@@ -33,7 +33,7 @@ class MessageHistory extends \yii\db\ActiveRecord
     {
         return [
             [['message_id', 'message_sent_list', 'delivery_id'], 'required'],
-            [['message_id', 'message_sent_list', 'delivery_id'], 'integer'],
+            [['message_id', 'message_sent_list', 'delivery_id'], 'string', 'max' => 25],
             [['message_sent_list'], 'unique']
         ];
     }

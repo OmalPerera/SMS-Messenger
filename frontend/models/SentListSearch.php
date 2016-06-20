@@ -18,8 +18,7 @@ class SentListSearch extends SentList
     public function rules()
     {
         return [
-            [['sent_list_id'], 'integer'],
-            [['recipient_phone_number'], 'safe'],
+            [['sent_list_id', 'recipient_phone_number'], 'safe'],
         ];
     }
 
@@ -55,11 +54,8 @@ class SentListSearch extends SentList
             return $dataProvider;
         }
 
-        $query->andFilterWhere([
-            'sent_list_id' => $this->sent_list_id,
-        ]);
-
-        $query->andFilterWhere(['like', 'recipient_phone_number', $this->recipient_phone_number]);
+        $query->andFilterWhere(['like', 'sent_list_id', $this->sent_list_id])
+            ->andFilterWhere(['like', 'recipient_phone_number', $this->recipient_phone_number]);
 
         return $dataProvider;
     }

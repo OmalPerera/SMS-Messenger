@@ -25,13 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            //'history_log_id',
-            //'message_id',
-            'message.message_body',
-            'message.message_sent_group',
-            //'message_sent_list',
-            'messageSentList.recipient_phone_number',
-            'message.message_create_date',
+            'history_log_id',
+            'message_id',
+            //'message.message_body',
+            //'message.message_sent_group',
+            'message_sent_list',
+            //'messageSentList.recipient_phone_number',
+            //'message.message_create_date',
             'delivery_id',
 
             ['class' => 'yii\grid\ActionColumn',

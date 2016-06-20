@@ -7,8 +7,8 @@ use Yii;
 /**
  * This is the model class for table "message_delivery".
  *
- * @property integer $delivery_id
- * @property integer $message_id
+ * @property string $delivery_id
+ * @property string $message_id
  * @property string $phone_number
  * @property string $delivery_message
  * @property string $delivery_date_time
@@ -33,8 +33,8 @@ class MessageDelivery extends \yii\db\ActiveRecord
     {
         return [
             [['delivery_id', 'message_id', 'phone_number', 'delivery_message', 'delivery_date_time'], 'required'],
-            [['delivery_id', 'message_id'], 'integer'],
             [['delivery_date_time'], 'safe'],
+            [['delivery_id', 'message_id'], 'string', 'max' => 25],
             [['phone_number', 'delivery_message'], 'string', 'max' => 20],
             [['delivery_id'], 'unique']
         ];

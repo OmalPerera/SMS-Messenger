@@ -54,7 +54,7 @@ class MessageDeliveryController extends Controller
 
     /**
      * Displays a single MessageDelivery model.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionView($id)
@@ -85,7 +85,7 @@ class MessageDeliveryController extends Controller
     /**
      * Updates an existing MessageDelivery model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionUpdate($id)
@@ -104,7 +104,7 @@ class MessageDeliveryController extends Controller
     /**
      * Deletes an existing MessageDelivery model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionDelete($id)
@@ -117,7 +117,7 @@ class MessageDeliveryController extends Controller
     /**
      * Finds the MessageDelivery model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param string $id
      * @return MessageDelivery the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */

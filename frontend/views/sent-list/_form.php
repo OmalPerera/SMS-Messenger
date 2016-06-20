@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'sent_list_id')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'recipient_phone_number')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
