@@ -40,32 +40,7 @@ class SentListController extends Controller
         ];
     }
 
-/*
-    public function actionTest(){
 
-        if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();
-            //print_r($data);
-
-        }
-
-
-        return $this->render('test');
-        /*
-        if(Yii::app()->request->isPostRequest)
-          {
-            if(isset($_POST['keylist']) && $_POST['keylist']!=''){
-                $data = keylist;
-               print_r(json_encode($data));
-            
-            }
-          }
-          else{
-           throw new NotFoundHttpException('The requested page does not exist.');
-         }
-         
-    }
-*/
 
     /**
      * Lists all SentList models.
@@ -109,14 +84,18 @@ class SentListController extends Controller
             //echo $recipient_id;
 
             $recipient_id = implode(",",$data['keylist']);
-            echo $recipient_id;
+            //echo $recipient_id;
 
 
             $model = new SentList();
             $model->recipient_phone_number = $recipient_id;
             $model->save();
 
-            //return $this->redirect(['view', 'id' => $model->sent_list_id]);
+
+            
+            Yii::$app->runAction('message-history/create', ['message_id'=>'52','sentlist_id'=>'52', 'delivery_id'=>'1']);
+
+            
 
         }
  

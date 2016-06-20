@@ -65,20 +65,55 @@ class MessageHistoryController extends Controller
 
     /**
      * Creates a new MessageHistory model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($message_id, $sentlist_id, $delivery_id)
     {
+
+
+        if( isset($message_id) 
+            && isset($sentlist_id) 
+            && isset($delivery_id) 
+            && !empty($message_id) 
+            && !empty($sentlist_id) 
+            && !empty($delivery_id)
+            ){
+
+                //echo $message_id;
+                //echo $sentlist_id;
+                //echo $delivery_id;
+
+                $model = new MessageHistory();
+                //$model->load(Yii::$app->request->post()){
+                $model->message_id = $message_id;
+                $model->message_sent_list = $sentlist_id;
+                $model->delivery_id = $delivery_id;
+                $model->save();
+
+
+        }else{
+            throw new NotFoundHttpException('Some data were missed');
+        }
+
+
+        /*
         $model = new MessageHistory();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if (
+            $model->load(Yii::$app->request->post())){
+            //$model->message_sent_list = $sentlistid;
+            $model->message_id = '45';
+            $model->delivery_id = '1';
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->history_log_id]);
-        } else {
+        } 
+
+        else {
             return $this->render('create', [
                 'model' => $model,
             ]);
-        }
+        }*/
     }
 
     /**
@@ -89,6 +124,11 @@ class MessageHistoryController extends Controller
      */
     public function actionUpdate($id)
     {
+        $session_sentlist_id = Yii::$app->session;
+        $session_sentlist_id->open();
+        $sentlist_var = $session_sentlist_id['a'];
+        echo $sentlist_var;
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

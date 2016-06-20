@@ -19,8 +19,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'message_id') ?>
 
-    <?= $form->field($model, 'message_sent_group_id') ?>
-
     <?= $form->field($model, 'message_sent_list') ?>
 
     <?= $form->field($model, 'delivery_id') ?>

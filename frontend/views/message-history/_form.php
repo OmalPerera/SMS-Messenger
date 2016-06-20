@@ -12,11 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'history_log_id')->textInput() ?>
-
     <?= $form->field($model, 'message_id')->textInput() ?>
-
-    <?= $form->field($model, 'message_sent_group_id')->textInput() ?>
 
     <?= $form->field($model, 'message_sent_list')->textInput() ?>
 

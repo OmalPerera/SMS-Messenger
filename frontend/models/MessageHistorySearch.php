@@ -18,7 +18,7 @@ class MessageHistorySearch extends MessageHistory
     public function rules()
     {
         return [
-            [['history_log_id', 'message_id', 'message_sent_group_id', 'message_sent_list', 'delivery_id'], 'integer'],
+            [['history_log_id', 'message_id', 'message_sent_list', 'delivery_id'], 'integer'],
         ];
     }
 
@@ -57,7 +57,6 @@ class MessageHistorySearch extends MessageHistory
         $query->andFilterWhere([
             'history_log_id' => $this->history_log_id,
             'message_id' => $this->message_id,
-            'message_sent_group_id' => $this->message_sent_group_id,
             'message_sent_list' => $this->message_sent_list,
             'delivery_id' => $this->delivery_id,
         ]);

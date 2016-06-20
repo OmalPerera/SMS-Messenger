@@ -33,6 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'message_body',
             'message_create_date',
             'message_author_id',
+            'message_sent_group',
         ],
     ]) ?>
 
