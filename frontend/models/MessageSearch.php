@@ -19,7 +19,7 @@ class MessageSearch extends Message
     {
         return [
             [['message_id', 'message_author_id'], 'integer'],
-            [['message_subject', 'message_body', 'message_create_date'], 'safe'],
+            [['message_subject', 'message_body', 'message_create_date', 'message_sent_group'], 'safe'],
         ];
     }
 
@@ -62,7 +62,8 @@ class MessageSearch extends Message
         ]);
 
         $query->andFilterWhere(['like', 'message_subject', $this->message_subject])
-            ->andFilterWhere(['like', 'message_body', $this->message_body]);
+            ->andFilterWhere(['like', 'message_body', $this->message_body])
+            ->andFilterWhere(['like', 'message_sent_group', $this->message_sent_group]);
 
         return $dataProvider;
     }

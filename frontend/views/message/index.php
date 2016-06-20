@@ -25,10 +25,11 @@ $this->title = 'Messages';
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
 
-            //'message_id',
+            'message_id',
             //'message_subject',
             'message_body',
             'message_create_date',
+            'message_sent_group',
             //'message_author_id',
 
             ['class' => 'yii\grid\ActionColumn','visibleButtons' => ['view' => false, 'update' => false]],

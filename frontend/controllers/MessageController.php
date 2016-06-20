@@ -73,6 +73,16 @@ class MessageController extends Controller
      */
     public function actionCreate()
     {
+        $session_group_id = Yii::$app->session;
+        $session_group_id->open();
+        $currently_selected_group_id = $session_group_id['grou_id'];
+         $query = new Query;
+            $query->select('group_name')
+                  ->from('user_group')                               
+                  ->where(['group_id' => $currently_selected_group_id]);
+        $currently_selected_group_name = $query->one();
+        //print_r($currently_selected_group_name['group_name']);
+
         $model = new Message();
 
         if ($model->load(Yii::$app->request->post())) {
@@ -80,6 +90,7 @@ class MessageController extends Controller
             $model->message_author_id = Yii::$app->user->identity->id; 
             $model->message_create_date = date('Y-m-d H:i:s');
             $model->message_subject = 'msg1';
+            $model->message_sent_group = $currently_selected_group_name['group_name']; 
             $model->save();
 
             return $this->redirect(['view', 'id' => $model->message_id]);

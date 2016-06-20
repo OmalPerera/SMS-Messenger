@@ -15,9 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+    <!--p>
         <?= Html::a('Create Message History', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p-->
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -25,13 +25,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'history_log_id',
-            'message_id',
-            'message_sent_group_id',
-            'message_sent_list',
+            //'history_log_id',
+            //'message_id',
+            'message.message_body',
+            'message.message_sent_group',
+            //'message_sent_list',
+            'messageSentList.recipient_phone_number',
+            'message.message_create_date',
             'delivery_id',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+            'visibleButtons' => ['view' => false, 'update' => false,],
+            ],
         ],
     ]); ?>
 

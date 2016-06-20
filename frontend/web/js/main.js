@@ -87,6 +87,25 @@ $('#msg_send_button').click(
 			   	
 			});
 
+
+/*
+			$.ajax({
+				
+				url: "?r=message-history%2Fcreate",
+				type: "POST",
+				//dataType: 'Json',
+				data: {'keylist': selected_recipient_id},
+
+			   	success: function(data, textStatus, jqXHR) {
+			      	alert('Message Sent')
+			   	},
+			   	error: function(jqXHR, textStatus, errorThrown, data) {
+                	alert('error::'+errorThrown+' '+textStatus+' '+jqXHR+data)
+                },
+			   	
+			});
+			*/
+
 		}else{
 			alert('Please Enter a Valid Message');
 		}
