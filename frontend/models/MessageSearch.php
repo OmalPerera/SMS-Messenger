@@ -18,8 +18,8 @@ class MessageSearch extends Message
     public function rules()
     {
         return [
-            [['message_id', 'message_author_id'], 'integer'],
-            [['message_subject', 'message_body', 'message_create_date', 'message_sent_group'], 'safe'],
+            [['message_id', 'message_subject', 'message_body', 'message_create_date', 'message_sent_group'], 'safe'],
+            [['message_author_id'], 'integer'],
         ];
     }
 
@@ -56,12 +56,12 @@ class MessageSearch extends Message
         }
 
         $query->andFilterWhere([
-            'message_id' => $this->message_id,
             'message_create_date' => $this->message_create_date,
             'message_author_id' => $this->message_author_id,
         ]);
 
-        $query->andFilterWhere(['like', 'message_subject', $this->message_subject])
+        $query->andFilterWhere(['like', 'message_id', $this->message_id])
+            ->andFilterWhere(['like', 'message_subject', $this->message_subject])
             ->andFilterWhere(['like', 'message_body', $this->message_body])
             ->andFilterWhere(['like', 'message_sent_group', $this->message_sent_group]);
 

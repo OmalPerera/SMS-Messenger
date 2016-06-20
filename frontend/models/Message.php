@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "message".
  *
- * @property integer $message_id
+ * @property string $message_id
  * @property string $message_subject
  * @property string $message_body
  * @property string $message_create_date
@@ -34,12 +34,14 @@ class Message extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['message_subject', 'message_body', 'message_create_date', 'message_author_id', 'message_sent_group'], 'required'],
+            [['message_id', 'message_subject', 'message_body', 'message_create_date', 'message_author_id', 'message_sent_group'], 'required'],
             [['message_create_date'], 'safe'],
             [['message_author_id'], 'integer'],
+            [['message_id'], 'string', 'max' => 25],
             [['message_subject'], 'string', 'max' => 300],
             [['message_body'], 'string', 'max' => 500],
-            [['message_sent_group'], 'string', 'max' => 250]
+            [['message_sent_group'], 'string', 'max' => 250],
+            [['message_id'], 'unique']
         ];
     }
 
