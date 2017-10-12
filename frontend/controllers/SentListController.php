@@ -9,12 +9,18 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\db\Query;
+
 
 /**
  * SentListController implements the CRUD actions for SentList model.
  */
 class SentListController extends Controller
 {
+
+
+
+
     public function behaviors()
     {
         return [
@@ -35,6 +41,8 @@ class SentListController extends Controller
             ],
         ];
     }
+
+
 
     /**
      * Lists all SentList models.
@@ -68,17 +76,59 @@ class SentListController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+
     public function actionCreate()
     {
-        $model = new SentList();
+        if (Yii::$app->request->isAjax) {
+            $data = Yii::$app->request->post();
+            //print_r($data['keylist']['0']);
+            //$recipient_id = $data['keylist']['0'];
+            //echo $recipient_id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $recipient_id = implode(",",$data['keylist']);
+            //echo $recipient_id;
+
+        
+            //generating a random uniqe ID with thr prefix 'sent_'
+            $random_sent_list_id = uniqid("sent_");
+
+            $session_message_info = Yii::$app->session;
+            $session_message_info->open();
+            //store the $random_sent_list_id in a SESSION
+            $session_message_info['sent_list_id'] = $random_sent_list_id;
+
+            $message_id = $session_message_info['msg_id'];
+            /*+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++*/
+            $delivery_id = 'deli_5767fa02de5ff';
+            $session_message_info->close();
+
+
+            $model = new SentList();
+            $model->sent_list_id = $random_sent_list_id;
+            $model->recipient_phone_number = $recipient_id;
+            $model->save();
+
+
+            Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
+
+         
+
+        }
+ 
+ /*       $model = new SentList();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model->recipient_phone_number = $data;
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->sent_list_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
+        */
+        
     }
 
     /**

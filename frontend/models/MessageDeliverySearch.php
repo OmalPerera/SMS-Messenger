@@ -18,8 +18,7 @@ class MessageDeliverySearch extends MessageDelivery
     public function rules()
     {
         return [
-            [['delivery_id', 'message_id'], 'integer'],
-            [['phone_number', 'delivery_message', 'delivery_date_time'], 'safe'],
+            [['delivery_id', 'message_id', 'phone_number', 'delivery_message', 'delivery_date_time'], 'safe'],
         ];
     }
 
@@ -56,12 +55,12 @@ class MessageDeliverySearch extends MessageDelivery
         }
 
         $query->andFilterWhere([
-            'delivery_id' => $this->delivery_id,
-            'message_id' => $this->message_id,
             'delivery_date_time' => $this->delivery_date_time,
         ]);
 
-        $query->andFilterWhere(['like', 'phone_number', $this->phone_number])
+        $query->andFilterWhere(['like', 'delivery_id', $this->delivery_id])
+            ->andFilterWhere(['like', 'message_id', $this->message_id])
+            ->andFilterWhere(['like', 'phone_number', $this->phone_number])
             ->andFilterWhere(['like', 'delivery_message', $this->delivery_message]);
 
         return $dataProvider;

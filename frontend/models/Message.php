@@ -7,11 +7,12 @@ use Yii;
 /**
  * This is the model class for table "message".
  *
- * @property integer $message_id
+ * @property string $message_id
  * @property string $message_subject
  * @property string $message_body
  * @property string $message_create_date
  * @property integer $message_author_id
+ * @property string $message_sent_group
  *
  * @property User $messageAuthor
  * @property MessageDelivery[] $messageDeliveries
@@ -33,11 +34,14 @@ class Message extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['message_subject', 'message_body', 'message_create_date', 'message_author_id'], 'required'],
+            [['message_id', 'message_subject', 'message_body', 'message_create_date', 'message_author_id', 'message_sent_group'], 'required'],
             [['message_create_date'], 'safe'],
             [['message_author_id'], 'integer'],
+            [['message_id'], 'string', 'max' => 25],
             [['message_subject'], 'string', 'max' => 300],
-            [['message_body'], 'string', 'max' => 500]
+            [['message_body'], 'string', 'max' => 500],
+            [['message_sent_group'], 'string', 'max' => 250],
+            [['message_id'], 'unique']
         ];
     }
 
@@ -52,6 +56,7 @@ class Message extends \yii\db\ActiveRecord
             'message_body' => 'Message Body',
             'message_create_date' => 'Message Create Date',
             'message_author_id' => 'Message Author ID',
+            'message_sent_group' => 'Message Sent Group',
         ];
     }
 

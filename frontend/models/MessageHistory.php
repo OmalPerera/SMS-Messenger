@@ -8,14 +8,13 @@ use Yii;
  * This is the model class for table "message_history".
  *
  * @property integer $history_log_id
- * @property integer $message_id
- * @property integer $message_sent_group_id
- * @property integer $message_sent_list
- * @property integer $delivery_id
+ * @property string $message_id
+ * @property string $message_sent_list
+ * @property string $delivery_id
  *
  * @property Message $message
  * @property MessageDelivery $delivery
- * @property SentList $sentList
+ * @property SentList $messageSentList
  */
 class MessageHistory extends \yii\db\ActiveRecord
 {
@@ -33,9 +32,8 @@ class MessageHistory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['history_log_id', 'message_id', 'message_sent_group_id', 'message_sent_list', 'delivery_id'], 'required'],
-            [['history_log_id', 'message_id', 'message_sent_group_id', 'message_sent_list', 'delivery_id'], 'integer'],
-            [['history_log_id'], 'unique'],
+            [['message_id', 'message_sent_list', 'delivery_id'], 'required'],
+            [['message_id', 'message_sent_list', 'delivery_id'], 'string', 'max' => 25],
             [['message_sent_list'], 'unique']
         ];
     }
@@ -48,7 +46,6 @@ class MessageHistory extends \yii\db\ActiveRecord
         return [
             'history_log_id' => 'History Log ID',
             'message_id' => 'Message ID',
-            'message_sent_group_id' => 'Message Sent Group ID',
             'message_sent_list' => 'Message Sent List',
             'delivery_id' => 'Delivery ID',
         ];
@@ -73,7 +70,7 @@ class MessageHistory extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSentList()
+    public function getMessageSentList()
     {
         return $this->hasOne(SentList::className(), ['sent_list_id' => 'message_sent_list']);
     }

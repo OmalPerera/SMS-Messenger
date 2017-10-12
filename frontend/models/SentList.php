@@ -7,10 +7,10 @@ use Yii;
 /**
  * This is the model class for table "sent_list".
  *
- * @property integer $sent_list_id
+ * @property string $sent_list_id
  * @property string $recipient_phone_number
  *
- * @property MessageHistory $sentList
+ * @property MessageHistory $messageHistory
  */
 class SentList extends \yii\db\ActiveRecord
 {
@@ -29,7 +29,7 @@ class SentList extends \yii\db\ActiveRecord
     {
         return [
             [['sent_list_id', 'recipient_phone_number'], 'required'],
-            [['sent_list_id'], 'integer'],
+            [['sent_list_id'], 'string', 'max' => 25],
             [['recipient_phone_number'], 'string', 'max' => 20],
             [['sent_list_id'], 'unique']
         ];
@@ -49,7 +49,7 @@ class SentList extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSentList()
+    public function getMessageHistory()
     {
         return $this->hasOne(MessageHistory::className(), ['message_sent_list' => 'sent_list_id']);
     }

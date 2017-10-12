@@ -117,6 +117,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             //'group_id',
                             'recipient_name',
                             'recipient_phone_number',
+                            //'group.group_name',
                             ['class' => 'yii\grid\ActionColumn',
                                 'visibleButtons' => ['view' => false],
                             ]
@@ -143,10 +144,17 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <div class="user_def_message_div">
 
+<<<<<<< HEAD
                     <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create']) ]);
+=======
+                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]); 
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
                         $msg_model = new Message();
-                    ?>
 
+
+
+
+                    ?>
                         <div class="row" style="text-align:center">
                             <div class="col-lg-10 col-md-10 col-lsm-10 col-xs-10 ">
                                 <?= $form->field($msg_model, 'message_body')->textInput(['maxlength' => true])->label(false) ->textArea(['id'=>'user_msg_input', 'placeholder'=>'Say something...', 'class'=>'user_def_msg-input']) ?>
@@ -156,6 +164,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                         </div>
                     <?php ActiveForm::end(); ?>
+
+
                 </div>
             </div>
         </div>

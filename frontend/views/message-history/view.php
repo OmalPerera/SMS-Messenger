@@ -30,7 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'history_log_id',
             'message_id',
-            'message_sent_group_id',
             'message_sent_list',
             'delivery_id',
         ],
