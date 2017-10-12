@@ -7,6 +7,27 @@ $('#create_groups_button').click(function (){
 		.load($(this).attr('value'));
 });
 
+<<<<<<< HEAD
+	/*	loads Bootstrap model to create a group
+	Used in the recipient-list index view
+	*/
+	$('#create_groups_button').click(function (){
+		$('#create_groups_modal').modal('show')
+		.find('#create_groups_modalContent')
+		.load($(this).attr('value'));
+	});
+
+
+
+	/*	redirects to the recipient list
+	introduction.php in site view
+	*/
+	$('#manage_groups_button').click(function (){
+		//alert('sdfghj');
+		var url = $("#manage_groups_button").val();
+		$(location).attr('href', url);
+	});
+=======
 
 
 
@@ -18,10 +39,48 @@ $('#manage_groups_button').click(function (){
 	var url = $("#manage_groups_button").val();
 	$(location).attr('href', url);
 });
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
 
 
 
 
+<<<<<<< HEAD
+	/*	loads Bootstrap model to create a recipient
+	Used in the recipient-list index view
+	*/
+	$('#create_recipient_button').click(function (){
+		$('#create_recipient_modal').modal('show')
+		.find('#create_recipient_modalContent')
+		.load($(this).attr('value'));
+	});
+
+
+
+	$('#msg_send_button').click(function () {
+		var message = document.getElementById('user_msg_input').value;
+
+		if (message){
+			//alert(message);
+			var selected_recipient_id = $('#recipient_list_grid').yiiGridView('getSelectedRows'); // returns an array of pkeys, and #grid is your grid element id
+			alert(selected_recipient_id);
+		}else{
+			//alert('Please Enter a Valid Message');
+		}
+
+
+
+
+		/*$.post({
+		url: '/site/calculate-total', // your controller action
+		dataType: 'json',
+		data: {keylist: keys},
+		success: function(data) {
+		if (data.status === 'success') {
+		alert('Total price is ' + data.total);
+	}
+},
+});*/
+=======
 /*	loads Bootstrap model to create a recipient
 	Used in the recipient-list index view 
 */
@@ -33,16 +92,23 @@ $('#create_recipient_button').click(function (){
 
 
 
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
 
+//alert(selected_recipient_id);
+
+});
+
+
+
+/*	loads the index page of the user-groups to the <div>
+on the recipient-list view (user choose his groups from here)
+*/
+$("#group_list")
+.load("index.php?r=user-group");
+return false;
 
 $(function(){
 
-	/*	loads the index page of the user-groups to the <div>
-		on the recipient-list view (user choose his groups from here)
-	*/
-	$("#group_list")
-		.load("index.php?r=user-group");
-		return false;
 
 	
 });
@@ -51,6 +117,9 @@ $(function(){
 
 
 
+<<<<<<< HEAD
+});
+=======
 
 /*	When user clicks the SEND button in the RECIPIENT LIST controller
 	#msg_send_button id will get execute & store the message + the id s of the recipients.
@@ -114,3 +183,4 @@ $('#msg_send_button').click(
 
 
 
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6

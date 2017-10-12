@@ -31,10 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 user_def_recipient-list-index-top-banner-div" >
                         <p class="user_def_recipient-list-index-top-banner-text">Create your own group & manage messaging</p>
-                        <?= Html::button('CREATE GROUPS NOW', 
+                        <?= Html::button('CREATE GROUPS NOW',
                             ['value'=>Url::to('index.php?r=user-group/create'),
-                            'class' => 'btn btn-primary user_def_recipient-list-index-top-banner-create-group-button', 
-                            'id'=>'create_groups_button']) 
+                            'class' => 'btn btn-primary user_def_recipient-list-index-top-banner-create-group-button',
+                            'id'=>'create_groups_button'])
                         ?>
                         <!-- Use to create popup form for create Groups -->
                             <?php
@@ -50,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <!-- ****************************************** -->
 
                     </div>
-                </div>   
+                </div>
             </div>
         </div>
     <!-- ************** END : Top row with the banner ************** -->
@@ -79,15 +79,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
                     -->
 
-                    <?= Html::button('Add a recipient', 
+                    <?= Html::button('Add a recipient',
                         [
                             'value'=>Url::to('index.php?r=recipient-list/create'),
-                            'class' => 'btn btn-primary', 
-                            'id'=>'create_recipient_button', 
+                            'class' => 'btn btn-primary',
+                            'id'=>'create_recipient_button',
                             'style' =>  'cursor:pointer; position:absolute; right: 10%; background-color: #075a9b;'
                         ]
                     ) ?>
-                    
+
 
 
                     <!-- Uses for popup form to create recipient -->
@@ -125,8 +125,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]); ?>
 
 
-                    
-                    
+
+
                 </div>
             </div>
 
@@ -134,9 +134,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- ************** END : row with User-Group list & corresponding recipient list ************** -->
 
 
-        
 
-            
+
+
         <div class="navbar-fixed-bottom row" style="height: 100px" >
             <div class="col-lg-3 col-md-3 col-sm-3">
             </div>
@@ -144,7 +144,11 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <div class="user_def_message_div">
 
+<<<<<<< HEAD
+                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create']) ]);
+=======
                     <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]); 
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
                         $msg_model = new Message();
 
 
@@ -158,15 +162,15 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <?= Html::submitButton($msg_model->isNewRecord ? 'SEND' : 'Update', ['class' => 'btn btn-primary user_def_msg-send-button', 'id'=>'msg_send_button']) ?>
                             </div>
-                        </div>   
+                        </div>
                     <?php ActiveForm::end(); ?>
 
 
                 </div>
             </div>
         </div>
-    
 
-                
+
+
 
 </div>
