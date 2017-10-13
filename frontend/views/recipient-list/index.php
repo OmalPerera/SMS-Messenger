@@ -135,6 +135,12 @@ $this->params['breadcrumbs'][] = $this->title;
                         ],
                     ]); ?>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ffea512c019613380ed9d48223c3b0b1dc15b334
                 </div>
             </div>
 
@@ -152,7 +158,15 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <div class="user_def_message_div">
 
+<<<<<<< HEAD
                     <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]);
+=======
+<<<<<<< HEAD
+                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create']) ]);
+=======
+                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]); 
+>>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
+>>>>>>> ffea512c019613380ed9d48223c3b0b1dc15b334
                         $msg_model = new Message();
                     ?>
                         <div class="row" style="text-align:center">
