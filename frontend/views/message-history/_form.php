@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'history_log_id')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'message_id')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'message_sent_list')->textInput(['maxlength' => true]) ?>

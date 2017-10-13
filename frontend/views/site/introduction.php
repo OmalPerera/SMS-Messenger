@@ -14,7 +14,7 @@ $this->title = 'SMS Messenger';
 ?>
 <div class="row">
 	<div class="row" style="text-align: center;">
-		<img src="../web/images/intro.png" style="height:350px; margin-top:-10px"/>      
+		<input type="image" class="user_def_into_image" value=" "/>      
 	</div>
 
 	<div class="row" id="introToNewUser" style="text-align: center;">
@@ -39,7 +39,7 @@ $this->title = 'SMS Messenger';
 
 
 
-    
+
         <?php
 
             //$user_model = new User();
@@ -48,7 +48,7 @@ $this->title = 'SMS Messenger';
 
             $query = new Query;
             $query->select('group_id')
-                  ->from('user_group')                               
+                  ->from('user_group')
                   ->where(['group_owner_id' => $currently_logged_userid]);
 
             $group_id_array = $query->all();
@@ -67,7 +67,7 @@ $this->title = 'SMS Messenger';
                 }
             </style>
         <?php
-                
+
             }else{
                 $first_group_id = $group_id_array["0"]["group_id"];
 
@@ -89,12 +89,11 @@ $this->title = 'SMS Messenger';
             </style>
         <?php
             }
-        ?>   
+        ?>
 
 
     <div class="row" id="introToregularUsers" style="text-align: center;">
         <p style="font-size:30px; padding-top:40px; padding-bottom:10px"><b>You have already created Groups!</b></p>
         <?= Html::button('Manage Groups', ['value'=>Url::to($redirecting_url),'class' => 'btn btn-primary',  'id'=>'manage_groups_button', 'style' => 'background-color: #075a9b; font-size:18px; background-repeat:no-repeat; border:none; cursor:pointer; overflow: hidden; outline:none;']) ?>
-    </div>  
+    </div>
 </div>
-

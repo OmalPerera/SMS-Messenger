@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Message Histories';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="message-history-index">
 
@@ -25,17 +25,31 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'history_log_id',
-            'message_id',
-            //'message.message_body',
-            //'message.message_sent_group',
-            'message_sent_list',
-            //'messageSentList.recipient_phone_number',
-            //'message.message_create_date',
-            'delivery_id',
+            //'history_log_id',
+            //'message_id',
+            [
+                'attribute' => 'message.message_body',
+                'label' =>'Message',
+                'contentOptions' => ['style'=>' overflow: hidden; max-width: 60ch;'],
+            ],
+            [
+                'attribute' => 'message.message_sent_group',
+                'label' =>'Group',
+            ],
+            //'message_sent_list',
+            [
+                'attribute' => 'messageSentList.recipient_phone_number',
+                'label' =>'Recipients',
+            ],
+            [
+                'attribute' => 'message.message_create_date',
+                'label' =>'Date',
+            ],
+            //'delivery_id',
+            'delivery.delivery_message',
 
             ['class' => 'yii\grid\ActionColumn',
-            'visibleButtons' => ['view' => false, 'update' => false,],
+            'visibleButtons' => ['update' => false,],
             ],
         ],
     ]); ?>
