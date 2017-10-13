@@ -88,7 +88,7 @@ class SentListController extends Controller
             $recipient_id = implode(",",$data['keylist']);
             //echo $recipient_id;
 
-        
+
             //generating a random uniqe ID with thr prefix 'sent_'
             $random_sent_list_id = uniqid("sent_");
 
@@ -111,10 +111,10 @@ class SentListController extends Controller
 
             Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
 
-         
+
 
         }
- 
+
  /*       $model = new SentList();
 
         if ($model->load(Yii::$app->request->post())) {
@@ -128,7 +128,7 @@ class SentListController extends Controller
             ]);
         }
         */
-        
+
     }
 
     /**

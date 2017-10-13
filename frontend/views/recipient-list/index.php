@@ -20,7 +20,15 @@ $this->params['breadcrumbs'][] = $this->title;
 */
 ?>
 
-<div class="recipient-list-index row" style="margin-left:5px ; ">
+<div class="row" style="margin-left:5px ; ">
+
+  <!--displaying alert after sending the message-->
+  <?php if (Yii::$app->session->hasFlash('success')): ?>
+    <div class="alert alert-info alert-dismissable" style="height: 30px; line-height:30px; padding:0px 20px;">
+      <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+      <?= Yii::$app->session->getFlash('success') ?>
+    </div>
+  <?php endif; ?>
 
     <!-- ************** START : Top row with the banner ************** -->
         <div class="row" style="padding-bottom:30px;">
@@ -70,6 +78,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php Pjax::begin(); ?>
                     <div id="group_list"></div>
                 <?php Pjax::end(); ?>
+                <p>
+                    <?= Html::a('History', ['/message-history'], ['class' => 'btn btn-default history-btn']) ?>
+                </p>
             </div>
 
             <div class="col-lg-9 col-md-9 col-sm-9">
@@ -124,9 +135,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         ],
                     ]); ?>
 
-
-
-
                 </div>
             </div>
 
@@ -144,16 +152,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-9 col-md-9 col-sm-9">
                 <div class="user_def_message_div">
 
-<<<<<<< HEAD
-                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create']) ]);
-=======
-                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]); 
->>>>>>> ac88d57dc1544874ee354c1b568b200e612557c6
+                    <?php $form = ActiveForm::begin(['id' => 'user_msg','action' => Url::to(['message/create'])]);
                         $msg_model = new Message();
-
-
-
-
                     ?>
                         <div class="row" style="text-align:center">
                             <div class="col-lg-10 col-md-10 col-lsm-10 col-xs-10 ">

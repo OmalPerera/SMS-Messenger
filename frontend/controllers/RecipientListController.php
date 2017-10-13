@@ -47,7 +47,7 @@ class RecipientListController extends Controller
 
         // Get the params from GET request
         $params = Yii::$app->request->queryParams;
-        // Parse them to /app/model/ModelSearch::search() 
+        // Parse them to /app/model/ModelSearch::search()
         $dataProvider = $searchModel->search($params);
 
 
@@ -66,20 +66,15 @@ class RecipientListController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
-   
+
     }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-
-
-
-
     /*
-        No need of showing all the recipient list; 
-        only need to show relevent list in each groups 
+        No need of showing all the recipient list;
+        only need to show relevent list in each groups
     */
 
     /**
@@ -138,16 +133,16 @@ class RecipientListController extends Controller
             $model->group_id = $currently_selected_group_id;    //currently selected group id is automatically inserted into the recipient_list.group_id column in database
             $session_group_id->destroy();                       //'session_group_id' destroyed because it is not needed furthur more.
             $model->save();
-             
+
             return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $currently_selected_group_id]);
-           
+
 
         } else {
             return $this->renderAjax('create', [
                 'model' => $model,
             ]);
         }
-        
+
     }
 
 
@@ -195,11 +190,11 @@ class RecipientListController extends Controller
     {
         $this->findModel($id)->delete();
         //return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $currently_selected_group_id]);
-         
+
         //$session_first_group_id = Yii::$app->session;
         //$session_first_group_id->open();
         $redi_group_id = $$session_group_id['grou_id'];
-          
+
         return $this->redirect(['index']);
     }
 

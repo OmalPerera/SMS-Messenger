@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "message_history".
  *
- * @property integer $history_log_id
+ * @property string $history_log_id
  * @property string $message_id
  * @property string $message_sent_list
  * @property string $delivery_id
@@ -32,8 +32,9 @@ class MessageHistory extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['message_id', 'message_sent_list', 'delivery_id'], 'required'],
-            [['message_id', 'message_sent_list', 'delivery_id'], 'string', 'max' => 25],
+            [['history_log_id', 'message_id', 'message_sent_list', 'delivery_id'], 'required'],
+            [['history_log_id', 'message_id', 'message_sent_list', 'delivery_id'], 'string', 'max' => 25],
+            [['history_log_id'], 'unique'],
             [['message_sent_list'], 'unique']
         ];
     }
