@@ -9,6 +9,7 @@ $config = [
     ],
 ];
 
+//Disable the debug module + gii tool for the production environment
 /*if (!YII_ENV_TEST) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
