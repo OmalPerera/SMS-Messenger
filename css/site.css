@@ -257,8 +257,8 @@ img {
 
 
 .user_def_navbar{
-    background-color: #075a9b;
-    border-color: #075a9b;
+    background-color: #24292d;
+    border-color: #24292d;
 }
 
 .user_def_navbar-brand{
@@ -353,9 +353,8 @@ img {
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #fff;
-    background-color: #06497D;
+    /*background-color: #06497D;*/
 }
-
 
 .history-btn{
     background-image: url("../images/history_btn_bg.png");

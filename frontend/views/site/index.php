@@ -4,17 +4,17 @@
 
 $this->title = 'SMS Messenger';
 ?>
-<div>      
+<div>
     <div id="user_def_banner-1">
         <div class="container-fluid">
-            
+
             <div class="row" style="height: 75px"></div>
-            
+
             <div class="row">
                 <div class="col-lg-6 col-md-7 col-sm-8 col-xs-9" style="text-align: center;">
-                    <img src="../web/images/logo.png" style="margin-right: 35px"/>
+                    <img src="..site/views/frontend/images/logo.png" style="margin-right: 35px"/>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-5 col-sm-4 col-xs-3">
                     <a href="index.php?r=site%2Flogin">
                         <button type="button" class="user_def_rounded-corners user_def_login-btn user_def_login-button-background">
@@ -23,10 +23,10 @@ $this->title = 'SMS Messenger';
                     </a>
                 </div>
             </div>
-            
-            
-            
-            
+
+
+
+
             <div style="position: relative">
                 <div id="user_def_registration-panel-background" class="user_def_rounded-corners">
                     <div>
@@ -35,7 +35,7 @@ $this->title = 'SMS Messenger';
                     </div>
                     <div style="vertical-align: middle; text-align: center; padding-top: 35px">
 
-                        
+
                         <?php
 
                             /* @var $this yii\web\View */
@@ -58,7 +58,7 @@ $this->title = 'SMS Messenger';
                                         <?= $form->field($model, 'email')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'E-mail address'])->label(false) ?>
                                         <?= $form->field($model, 'password')->passwordInput()->textInput(['class'=>'user_def_registration-panel-fields','placeholder'=>'Password'])->label(false) ?>
                                         <?= $form->field($model, 'user_phone_number')->textInput(['class'=>'user_def_registration-panel-fields', 'placeholder'=>'Mobile number'])->label(false) ?>
-                                        
+
                                         <!--div class="user_def_registration-panel-btn"-->
                                             <?= Html::submitButton('Register Now', ['class' => 'user_def_registration-panel-btn', 'name' => 'signup-button']) ?>
                                         <!--/div-->
@@ -71,9 +71,7 @@ $this->title = 'SMS Messenger';
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
-</div> 
-
-
+</div>

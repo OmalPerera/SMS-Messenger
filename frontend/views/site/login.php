@@ -10,30 +10,46 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Login';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+<div class="chrome webkit mac x1 Locale_en_GB" dir="ltr">
+  <div class="_3v_p _54kd _5do8" id="u_0_6">
+    <div class="_3v_x">
+      <div class="_210j">
+        <div class="_3v_v">
+          <div class="_3400">
+            <img class="img" src="images/login_index_logo.png" alt="" width="120" height="120" ></div>
+          <h1 class="_5hy4">Messej</h1>
+          <div class="_3403">Sign in to get started.</div>
+          <div class="_3v_w" id="u_0_2">
+            <div class="_3v_u" style="text-align: center">
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+              <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                  <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Email address or User name', 'tabindex' => 1])->label(false) ?>
 
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                  <?= $form->field($model, 'password')->passwordInput(['placeholder' => 'Password', 'tabindex' => 1])->label(false) ?>
 
-                <div style="color:#999;margin:1em 0">
-                    If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-                </div>
+                  <?= $form->field($model, 'rememberMe')->checkbox(['class' => 'uiInputLabelLabel', 'tabindex' => 1])->label('Keep me signed in') ?>
 
-                <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
-                </div>
+                  <div class="form-group">
+                      <?= Html::submitButton('Sign In', ['class' => '_42ft _4jy0 _2m_r _43dh _4jy4 _517h _51sy', 'name' => 'login-button', 'tabindex' => 1]) ?>
+                  </div>
 
-            <?php ActiveForm::end(); ?>
+                  <div>
+                      If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
+                  </div>
+
+              <?php ActiveForm::end(); ?>
+
+            </div>
+          </div>
         </div>
+        <div class="_3v_-">
+          <div class="_3w05"><img class="img" src="images/login_page_large.jpg" alt="" width="944" height="570"></div>
+        </div>
+      </div>
+      <div class="_yws hidden_elem" id="u_0_5"></div>
     </div>
-</div>
+    <div>
+    </div>
