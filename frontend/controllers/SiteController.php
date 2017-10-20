@@ -65,20 +65,7 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
-    /*
-     *---------------------- Changed due to signup form is in the index page
-     *---------------------- 
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
-    */
-    
+
     /**
      * Logs in a user.
      *
@@ -159,6 +146,17 @@ class SiteController extends Controller
             return $this->render('introduction');
         }else{
 
+          $model = new LoginForm();
+          //$this->layout = 'main_modified';
+          if ($model->load(Yii::$app->request->post()) && $model->login()) {
+              return $this->goBack();
+          } else {
+              return $this->render('login', [
+                  'model' => $model,
+              ]);
+          }
+
+            /* ---------- changed due to signup from th index page ---------
             $model = new SignupForm();
             $this->layout = 'main_modified';
             if ($model->load(Yii::$app->request->post())) {
@@ -168,7 +166,7 @@ class SiteController extends Controller
                     }
                 }
             }
-
+            */
             //return $this->render('signup', ['model' => $model,]);
             return $this->render('index', ['model' => $model,]);
         }
@@ -222,21 +220,21 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-    
-    
-    
-/*    
+
+
+
+/*
     public function actionRegonindex()
-    {   
+    {
         //$model = new();
         $model = new SignupForm();
         if($model->load(Yii::$app->request->post()) && $model->validate())
-        {   
+        {
         }else{
             return $this->render('regonindex', ['model' => $model,]);
         }
-        
+
     }
-*/    
-    
+*/
+
 }

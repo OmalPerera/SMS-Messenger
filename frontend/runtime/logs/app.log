@@ -36396,3 +36396,667 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2017-10-20 19:50:09 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'ActiveForm' not found' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/index.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 19:50:09 [::1][-][-][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '54797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508521809.46
+    'REQUEST_TIME' => 1508521809
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 19:51:02 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\SignupForm::rememberMe' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\base\Component->__get('rememberMe')
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1453): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'rememberMe')
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/widgets/ActiveField.php(541): yii\helpers\BaseHtml::activeCheckbox(Object(frontend\models\SignupForm), 'rememberMe', Array)
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2-bootstrap/ActiveField.php(212): yii\widgets\ActiveField->checkbox(Array, false)
+#4 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/index.php(29): yii\bootstrap\ActiveField->checkbox()
+#5 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#8 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#9 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/controllers/SiteController.php(173): yii\base\Controller->render('index', Array)
+#10 [internal function]: frontend\controllers\SiteController->actionIndex()
+#11 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#17 {main}
+2017-10-20 19:51:02 [::1][-][-][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '54806'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508521862.69
+    'REQUEST_TIME' => 1508521862
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 19:51:48 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''$form = ActiveForm::begin(['' (T_CONSTANT_ENCAPSED_STRING)' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/index.php:26
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 19:51:48 [::1][-][-][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '54814'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508521908.59
+    'REQUEST_TIME' => 1508521908
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 19:54:29 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: frontend\models\SignupForm::rememberMe' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\base\Component->__get('rememberMe')
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1453): yii\helpers\BaseHtml::getAttributeValue(Object(frontend\models\SignupForm), 'rememberMe')
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/widgets/ActiveField.php(541): yii\helpers\BaseHtml::activeCheckbox(Object(frontend\models\SignupForm), 'rememberMe', Array)
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2-bootstrap/ActiveField.php(212): yii\widgets\ActiveField->checkbox(Array, false)
+#4 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/index.php(29): yii\bootstrap\ActiveField->checkbox()
+#5 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#8 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#9 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/controllers/SiteController.php(173): yii\base\Controller->render('index', Array)
+#10 [internal function]: frontend\controllers\SiteController->actionIndex()
+#11 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#17 {main}
+2017-10-20 19:54:29 [::1][-][-][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '54837'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508522069.67
+    'REQUEST_TIME' => 1508522069
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 20:17:26 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '{'' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/controllers/SiteController.php:150
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 20:17:26 [::1][-][-][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+    'PHPSESSID' => '5f1361c9d6ab9182ff1998a23b436ebb'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D; PHPSESSID=5f1361c9d6ab9182ff1998a23b436ebb'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '55072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508523446.33
+    'REQUEST_TIME' => 1508523446
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 20:34:41 [::1][-][5f1361c9d6ab9182ff1998a23b436ebb][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\LoginForm::username1' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\base\Component->__get('username1')
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username1')
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1275): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username1', Array)
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/widgets/ActiveField.php(364): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username1', Array)
+#4 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php(28): yii\widgets\ActiveField->textInput(Array)
+#5 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#8 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#9 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/controllers/SiteController.php(156): yii\base\Controller->render('login', Array)
+#10 [internal function]: frontend\controllers\SiteController->actionIndex()
+#11 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#17 {main}
+2017-10-20 20:34:41 [::1][-][5f1361c9d6ab9182ff1998a23b436ebb][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+    'PHPSESSID' => '5f1361c9d6ab9182ff1998a23b436ebb'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D; PHPSESSID=5f1361c9d6ab9182ff1998a23b436ebb'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '55332'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508524481.42
+    'REQUEST_TIME' => 1508524481
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 20:34:47 [::1][-][5f1361c9d6ab9182ff1998a23b436ebb][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: common\models\LoginForm::username1' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(2051): yii\base\Component->__get('username1')
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1226): yii\helpers\BaseHtml::getAttributeValue(Object(common\models\LoginForm), 'username1')
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/helpers/BaseHtml.php(1275): yii\helpers\BaseHtml::activeInput('text', Object(common\models\LoginForm), 'username1', Array)
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/widgets/ActiveField.php(364): yii\helpers\BaseHtml::activeTextInput(Object(common\models\LoginForm), 'username1', Array)
+#4 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php(28): yii\widgets\ActiveField->textInput(Array)
+#5 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#6 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#8 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('login', Array, Object(frontend\controllers\SiteController))
+#9 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/controllers/SiteController.php(156): yii\base\Controller->render('login', Array)
+#10 [internal function]: frontend\controllers\SiteController->actionIndex()
+#11 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#12 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#17 {main}
+2017-10-20 20:34:47 [::1][-][5f1361c9d6ab9182ff1998a23b436ebb][info][application] $_COOKIE = [
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq\";}'
+    'PHPSESSID' => '5f1361c9d6ab9182ff1998a23b436ebb'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/Successfully%20deployed%20Messej/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'SQLiteManager_currentLangue=2; _csrf=869a9423dda123d22a8de5c99c918162cf507ad11d6758a4785b4799626e16b7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HN0cRdpAJA5xaEDxvJ8gVdjpldzhbBrq%22%3B%7D; PHPSESSID=5f1361c9d6ab9182ff1998a23b436ebb'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '55333'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/index.php'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508524487.62
+    'REQUEST_TIME' => 1508524487
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 21:05:50 [::1][-][929c66eda0ad06fe615da34068afdad5][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/signup' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('signup', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#2 {main}
+2017-10-20 21:05:50 [::1][-][929c66eda0ad06fe615da34068afdad5][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '929c66eda0ad06fe615da34068afdad5'
+    '_csrf' => '23ed44dfc2d1439967d2e0278b1ee117eefe4fe65d5013883597134cbc4f6cbba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1CXn79Z1SuMmDCzKxnopXkcyhkCw9rKk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/Successfully%20deployed%20Messej/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=929c66eda0ad06fe615da34068afdad5; _csrf=23ed44dfc2d1439967d2e0278b1ee117eefe4fe65d5013883597134cbc4f6cbba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221CXn79Z1SuMmDCzKxnopXkcyhkCw9rKk%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '57457'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508526350.68
+    'REQUEST_TIME' => 1508526350
+    'argv' => [
+        0 => 'r=site%2Fsignup'
+    ]
+    'argc' => 1
+]
+2017-10-20 22:11:32 [::1][-][482f95cfde598ce8a65fe22254951b54][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '>'' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php:29
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 22:11:32 [::1][-][482f95cfde598ce8a65fe22254951b54][info][application] $_COOKIE = [
+    'PHPSESSID' => '482f95cfde598ce8a65fe22254951b54'
+    '_csrf' => 'efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=482f95cfde598ce8a65fe22254951b54; _csrf=efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '60569'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508530292.12
+    'REQUEST_TIME' => 1508530292
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 22:13:43 [::1][-][482f95cfde598ce8a65fe22254951b54][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 22:13:43 [::1][-][482f95cfde598ce8a65fe22254951b54][info][application] $_COOKIE = [
+    'PHPSESSID' => '482f95cfde598ce8a65fe22254951b54'
+    '_csrf' => 'efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=482f95cfde598ce8a65fe22254951b54; _csrf=efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '60574'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508530423.65
+    'REQUEST_TIME' => 1508530423
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 22:14:08 [::1][-][482f95cfde598ce8a65fe22254951b54][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '>'' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php:29
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 22:14:08 [::1][-][482f95cfde598ce8a65fe22254951b54][info][application] $_COOKIE = [
+    'PHPSESSID' => '482f95cfde598ce8a65fe22254951b54'
+    '_csrf' => 'efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=482f95cfde598ce8a65fe22254951b54; _csrf=efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '60575'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508530448.2
+    'REQUEST_TIME' => 1508530448
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 22:14:21 [::1][-][482f95cfde598ce8a65fe22254951b54][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/frontend/views/site/login.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 22:14:21 [::1][-][482f95cfde598ce8a65fe22254951b54][info][application] $_COOKIE = [
+    'PHPSESSID' => '482f95cfde598ce8a65fe22254951b54'
+    '_csrf' => 'efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=482f95cfde598ce8a65fe22254951b54; _csrf=efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '60576'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508530461.23
+    'REQUEST_TIME' => 1508530461
+    'argv' => []
+    'argc' => 0
+]
+2017-10-20 22:41:39 [::1][-][543a0743a819de4ff120678621c542a9][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Cannot unset string offsets' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/widgets/ActiveField.php:539
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-10-20 22:41:38 [::1][-][543a0743a819de4ff120678621c542a9][info][application] $_COOKIE = [
+    '_csrf' => 'efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r\";}'
+    'PHPSESSID' => '543a0743a819de4ff120678621c542a9'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=efddc493f945f211e4f5a18e0a809eda78725d861bef3f75c3d5765e632050dca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22j0-o9ZuTR-_Rfi1xgiC7xAcY8YHm952r%22%3B%7D; PHPSESSID=543a0743a819de4ff120678621c542a9'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '62306'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/index.php'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508532098.99
+    'REQUEST_TIME' => 1508532098
+    'argv' => []
+    'argc' => 0
+]
