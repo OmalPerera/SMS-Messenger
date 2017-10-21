@@ -1,3 +1,5 @@
 /index.php
 /index-test.php
 .DS_Store
+main-local.php
+main-local_for_remote.php

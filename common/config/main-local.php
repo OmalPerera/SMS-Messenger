@@ -3,9 +3,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1:8889;dbname=sms_messenger_backend_project',
-            'username' => 'root',
-            'password' => 'root',
+            'dsn' => 'mysql:host=sql12.freesqldatabase.com:3306;dbname=sql12200553',
+            'username' => 'sql12200553',
+            'password' => 'Xh8rQtGNsU',
             'charset' => 'utf8',
         ],
         'mailer' => [
