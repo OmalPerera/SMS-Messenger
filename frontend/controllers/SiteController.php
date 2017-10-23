@@ -65,7 +65,6 @@ class SiteController extends Controller
         ];
     }
 
-
     /**
      * Logs in a user.
      *
@@ -78,6 +77,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+        $this->layout = 'layout-index';
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
@@ -132,10 +132,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-
-
     /**
-     * Signs user up.
+     * Logins user up.
      *
      * @return mixed
      */
@@ -147,7 +145,7 @@ class SiteController extends Controller
         }else{
 
           $model = new LoginForm();
-          //$this->layout = 'main_modified';
+          $this->layout = 'layout-index';
           if ($model->load(Yii::$app->request->post()) && $model->login()) {
               return $this->goBack();
           } else {
@@ -182,11 +180,11 @@ class SiteController extends Controller
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', 'Check your email for further instructions.   ');
 
                 return $this->goHome();
             } else {
-                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.   ');
             }
         }
 
@@ -221,7 +219,33 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * Displays Signup page.
+     *
+     * @return mixed
+     */
+    public function actionSignup()
+    {
+        if (!\Yii::$app->user->isGuest) {
+            //return $this->redirect('index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params');
+            return $this->render('introduction');
+        }else{
 
+            $model = new SignupForm();
+            $this->layout = 'main';
+            if ($model->load(Yii::$app->request->post())) {
+                if ($user = $model->signup()) {
+                    if (Yii::$app->getUser()->login($user)) {
+                        Yii::$app->session->setFlash('success', 'You have beek successfully Registered. Welcome!');
+                        return $this->goHome();
+                    }
+                }
+            }
+
+            //return $this->render('signup', ['model' => $model,]);
+            return $this->render('signup', ['model' => $model,]);
+        }
+    }
 
 /*
     public function actionRegonindex()
