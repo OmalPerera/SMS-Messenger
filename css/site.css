@@ -368,6 +368,16 @@ img {
 }
 
 .alert {
+  position: absolute;
+  z-index:99;
+  top: 55px;
+  left: 50%;
+  width: 60%;
+  text-align: center;
+  transform: translate(-50%);
+}
+
+.alert_msg_sent {
   margin-bottom: 1px;
   height: 20px;
   line-height:20px;
