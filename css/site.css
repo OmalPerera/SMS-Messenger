@@ -383,3 +383,22 @@ img {
   line-height:20px;
   padding:0px 10px;
 }
+
+
+.history-btn{
+    background-image: url("../images/history_btn_bg.png");
+    background-color: Transparent;
+    border: none;
+    width: 94%;
+    height: 35px;
+    text-align: left;
+    margin-left: 9px;
+    margin-top: 20px;
+}
+
+.alert {
+  margin-bottom: 1px;
+  height: 20px;
+  line-height:20px;
+  padding:0px 10px;
+}
