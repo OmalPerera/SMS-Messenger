@@ -37057,3 +37057,407 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2017-10-23 12:09:49 [::1][-][0df36de11f44090b1cf348e84f944cbb][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/signup' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('signup', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#2 {main}
+2017-10-23 12:09:48 [::1][-][0df36de11f44090b1cf348e84f944cbb][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_COOKIE = [
+    '_csrf' => '6358f4f086ecfed17588a3784530817a841fe89f4933895f5d52c9809988c4daa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fJ8Ge9-Dyy0aDb3KVJ6QH_PqLbFL2zjd\";}'
+    'PHPSESSID' => '0df36de11f44090b1cf348e84f944cbb'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/Successfully%20deployed%20Messej/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=6358f4f086ecfed17588a3784530817a841fe89f4933895f5d52c9809988c4daa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fJ8Ge9-Dyy0aDb3KVJ6QH_PqLbFL2zjd%22%3B%7D; PHPSESSID=0df36de11f44090b1cf348e84f944cbb'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '56888'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508753389
+    'REQUEST_TIME' => 1508753388
+    'argv' => [
+        0 => 'r=site%2Fsignup'
+    ]
+    'argc' => 1
+]
+2017-10-23 12:09:59 [::1][-][0df36de11f44090b1cf348e84f944cbb][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/signup' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('signup', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#2 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php(18): yii\base\Application->run()
+#2 {main}
+2017-10-23 12:09:59 [::1][-][0df36de11f44090b1cf348e84f944cbb][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_COOKIE = [
+    '_csrf' => '6358f4f086ecfed17588a3784530817a841fe89f4933895f5d52c9809988c4daa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fJ8Ge9-Dyy0aDb3KVJ6QH_PqLbFL2zjd\";}'
+    'PHPSESSID' => '0df36de11f44090b1cf348e84f944cbb'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hinejii'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/Successfully%20deployed%20Messej/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=6358f4f086ecfed17588a3784530817a841fe89f4933895f5d52c9809988c4daa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fJ8Ge9-Dyy0aDb3KVJ6QH_PqLbFL2zjd%22%3B%7D; PHPSESSID=0df36de11f44090b1cf348e84f944cbb'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/Successfully deployed Messej/index.php'
+    'REMOTE_PORT' => '56890'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/sec/hosted/Successfully%20deployed%20Messej/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'PHP_SELF' => '/sec/hosted/Successfully deployed Messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1508753399.58
+    'REQUEST_TIME' => 1508753399
+    'argv' => [
+        0 => 'r=site%2Fsignup'
+    ]
+    'argc' => 1
+]
+2017-11-22 06:35:37 [::1][11][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/messej/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#6 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#8 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(392): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#10 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\Controller->renderContent('<div class="row...')
+#11 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/controllers/SiteController.php(146): yii\base\Controller->render('introduction')
+#12 [internal function]: frontend\controllers\SiteController->actionIndex()
+#13 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#17 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#19 {main}
+2017-11-22 06:35:37 [::1][11][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fzP48Y7rMN1Mt6unpNrPZenveAKatOy1\";}'
+    'PHPSESSID' => '167dcd59107be44be7aafba3fb0dddaa'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+    22 => '22'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/2017-10-23-messej/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fzP48Y7rMN1Mt6unpNrPZenveAKatOy1%22%3B%7D; PHPSESSID=167dcd59107be44be7aafba3fb0dddaa; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '49634'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/2017-10-23-messej/index.php'
+    'SCRIPT_NAME' => '/sec/hosted/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/sec/hosted/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511328937.79
+    'REQUEST_TIME' => 1511328937
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 06:35:49 [::1][11][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/messej/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#6 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#8 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(392): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#10 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\Controller->renderContent('<div class="row...')
+#11 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/controllers/SiteController.php(146): yii\base\Controller->render('introduction')
+#12 [internal function]: frontend\controllers\SiteController->actionIndex()
+#13 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#17 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#19 {main}
+2017-11-22 06:35:49 [::1][11][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fzP48Y7rMN1Mt6unpNrPZenveAKatOy1\";}'
+    'PHPSESSID' => '167dcd59107be44be7aafba3fb0dddaa'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+    22 => '22'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fzP48Y7rMN1Mt6unpNrPZenveAKatOy1%22%3B%7D; PHPSESSID=167dcd59107be44be7aafba3fb0dddaa; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '49641'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/2017-10-23-messej/'
+    'SCRIPT_NAME' => '/sec/hosted/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/sec/hosted/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511328949.41
+    'REQUEST_TIME' => 1511328949
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 06:35:52 [::1][11][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/messej/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#6 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#8 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(392): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#10 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\Controller->renderContent('<div class="row...')
+#11 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/frontend/controllers/SiteController.php(146): yii\base\Controller->render('introduction')
+#12 [internal function]: frontend\controllers\SiteController->actionIndex()
+#13 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#17 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#19 {main}
+2017-11-22 06:35:52 [::1][11][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fzP48Y7rMN1Mt6unpNrPZenveAKatOy1\";}'
+    'PHPSESSID' => '167dcd59107be44be7aafba3fb0dddaa'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+    22 => '22'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/sec/hosted/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fzP48Y7rMN1Mt6unpNrPZenveAKatOy1%22%3B%7D; PHPSESSID=167dcd59107be44be7aafba3fb0dddaa; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/sec/hosted/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '49642'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/sec/hosted/2017-10-23-messej/'
+    'SCRIPT_NAME' => '/sec/hosted/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/sec/hosted/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511328952.43
+    'REQUEST_TIME' => 1511328952
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 06:36:51 [::1][11][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/messej/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#6 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#8 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(392): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#10 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\Controller->renderContent('<div class="row...')
+#11 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/SiteController.php(146): yii\base\Controller->render('introduction')
+#12 [internal function]: frontend\controllers\SiteController->actionIndex()
+#13 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#17 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#19 {main}
+2017-11-22 06:36:50 [::1][11][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => '58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fzP48Y7rMN1Mt6unpNrPZenveAKatOy1\";}'
+    'PHPSESSID' => '167dcd59107be44be7aafba3fb0dddaa'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+    22 => '22'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=58cbf1df57eb5e5483864fadf9d326358b10a256bbb6478fd69b8d525a0c90aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fzP48Y7rMN1Mt6unpNrPZenveAKatOy1%22%3B%7D; PHPSESSID=167dcd59107be44be7aafba3fb0dddaa; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '49678'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/messej/2017-10-23-messej/'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511329010.82
+    'REQUEST_TIME' => 1511329010
+    'argv' => []
+    'argc' => 0
+]

@@ -19,7 +19,7 @@ $this->title = 'Login';
         <div class="_3v_v">
           <div class="_3400">
             <img class="img" src="images/login_index_logo.png" alt="" width="120" height="120" ></div>
-          <h1 class="_5hy4">Messej</h1>
+          <h1 class="_5hy4">smsHailer</h1>
           <div class="_3403">Sign in to get started.</div>
           <div class="_3v_w" id="u_0_2">
             <div class="_3v_u" style="text-align: center">

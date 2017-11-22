@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'SMS Messenger';
+$this->title = 'smsHailer';
 ?>
 <div>
     <div id="user_def_banner-1">
@@ -45,7 +45,7 @@ $this->title = 'SMS Messenger';
                             use yii\helpers\Html;
                             use yii\bootstrap\ActiveForm;
 
-                            $this->title = 'SMS Messenger';
+                            $this->title = 'smsHailer';
                             $this->params['breadcrumbs'][] = $this->title;
                         ?>
                             <!--div class="site-signup">

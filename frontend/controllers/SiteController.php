@@ -147,7 +147,7 @@ class SiteController extends Controller
         }else{
 
           $model = new LoginForm();
-          //$this->layout = 'main_modified';
+          $this->layout = 'layout-index';
           if ($model->load(Yii::$app->request->post()) && $model->login()) {
               return $this->goBack();
           } else {
@@ -182,11 +182,11 @@ class SiteController extends Controller
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->session->setFlash('success', 'Check your email for further instructions.   ');
 
                 return $this->goHome();
             } else {
-                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+                Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for email provided.   ');
             }
         }
 

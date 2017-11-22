@@ -10,7 +10,7 @@ use yii\db\Query;
 
 /* @var $this yii\web\View */
 
-$this->title = 'SMS Messenger';
+$this->title = 'smsHailer';
 ?>
 <div class="row">
 	<div class="row" style="text-align: center;">
