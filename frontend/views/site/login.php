@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login - Messej';
+$this->title = 'Login - smsHailer';
 ?>
 
 
@@ -17,14 +17,8 @@ $this->title = 'Login - Messej';
       <div class="_210j">
         <div class="_3v_v">
           <div class="_3400">
-<<<<<<< HEAD
             <img class="img" src="images/login_index_logo.png" alt="" width="120" height="120" ></div>
           <h1 class="_5hy4">smsHailer</h1>
-=======
-            <img class="img" src="images/login_index_logo.png" alt="" width="120" height="120" >
-          </div>
-          <h1 class="_5hy4">Messej</h1>
->>>>>>> 9a5d037ecaefd437086ab152bb39e65a1bb35e47
           <div class="_3403">Sign in to get started.</div>
           <div class="_3v_w" id="u_0_2">
             <div class="_3v_u" style="text-align: center">

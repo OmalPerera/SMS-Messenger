@@ -38233,3 +38233,384 @@ $_SERVER = [
     'argc' => 1
 >>>>>>> 9a5d037ecaefd437086ab152bb39e65a1bb35e47
 ]
+2017-11-22 07:20:10 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting ']'' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/views/layouts/layout-index.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-22 07:20:10 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '50922'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/messej/2017-10-23-messej/'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511331610.36
+    'REQUEST_TIME' => 1511331610
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 07:20:51 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '<<' (T_SL), expecting ']'' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/views/layouts/layout-index.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-22 07:20:51 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    '_csrf' => '438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn\";}'
+    'SQLiteManager_currentLangue' => '2'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; _csrf=438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn%22%3B%7D; SQLiteManager_currentLangue=2'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '50929'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/messej/2017-10-23-messej/'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511331651.38
+    'REQUEST_TIME' => 1511331651
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 08:14:10 [::1][11][5b5e00f3626b9bb816aed41a23c3de7f][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: redirecting_url' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/views/site/introduction.php:36
+Stack trace:
+#0 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/views/site/introduction.php(36): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Applications/M...', 36, Array)
+#1 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#2 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#3 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#4 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('introduction', Array, Object(frontend\controllers\SiteController))
+#5 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/SiteController.php(144): yii\base\Controller->render('introduction')
+#6 [internal function]: frontend\controllers\SiteController->actionIndex()
+#7 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#10 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#11 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#13 {main}
+2017-11-22 08:14:10 [::1][11][5b5e00f3626b9bb816aed41a23c3de7f][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    '_csrf' => '438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn\";}'
+    'SQLiteManager_currentLangue' => '2'
+    'PHPSESSID' => '5b5e00f3626b9bb816aed41a23c3de7f'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/2017-10-23-messej/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; _csrf=438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn%22%3B%7D; SQLiteManager_currentLangue=2; PHPSESSID=5b5e00f3626b9bb816aed41a23c3de7f; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '59798'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/messej/2017-10-23-messej/index.php'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511334850.73
+    'REQUEST_TIME' => 1511334850
+    'argv' => []
+    'argc' => 0
+]
+2017-11-22 08:45:45 [::1][11][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Some data were missed' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/MessageHistoryController.php:105
+Stack trace:
+#0 [internal function]: frontend\controllers\MessageHistoryController->actionCreate(NULL, 'sent_5a152b298c...', 'deli_5767fa02de...')
+#1 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#4 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/SentListController.php(112): yii\base\Module->runAction('message-history...', Array)
+#5 [internal function]: frontend\controllers\SentListController->actionCreate()
+#6 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#9 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('sent-list/creat...', Array)
+#10 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#12 {main}
+2017-11-22 08:45:45 [::1][11][-][info][application] $_GET = [
+    'r' => 'sent-list/create'
+]
+
+$_POST = [
+    'keylist' => [
+        0 => '32'
+        1 => '33'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    '_csrf' => '438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn\";}'
+    'SQLiteManager_currentLangue' => '2'
+    'PHPSESSID' => '5b1d58d86533c01c1dbd3c9316191385'
+    '_identity' => 'd095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[11,\"AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 11
+    'group_id' => '22'
+    'grou_id' => '22'
+    'sent_list_id' => 'sent_5a152b298c7c9'
+    'history_id' => 'hist_5a152b29bd850'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '33'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_X_CSRF_TOKEN' => 'a2lwbWZvYzg0ODtaPgAbQi4GQAQIAVRCNBsKLgcwD1UBBCYqUgArVg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/2017-10-23-messej/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=22'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; _csrf=438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn%22%3B%7D; SQLiteManager_currentLangue=2; PHPSESSID=5b1d58d86533c01c1dbd3c9316191385; _identity=d095a6a506c3f92da5e578a8a8dfb09d4c655e20b7c5c6d102cf06d69b611bc4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B11%2C%22AMXOVkLvENMMo46ugXjNl_mJMOVnSyFz%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '50771'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=sent-list%2Fcreate'
+    'REQUEST_URI' => '/messej/2017-10-23-messej/index.php?r=sent-list%2Fcreate'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511336745.55
+    'REQUEST_TIME' => 1511336745
+    'argv' => [
+        0 => 'r=sent-list%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-11-22 09:32:48 [::1][14][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Some data were missed' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/MessageHistoryController.php:105
+Stack trace:
+#0 [internal function]: frontend\controllers\MessageHistoryController->actionCreate(NULL, 'sent_5a1536306c...', 'deli_5767fa02de...')
+#1 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#4 /Applications/MAMP/htdocs/messej/2017-10-23-messej/frontend/controllers/SentListController.php(112): yii\base\Module->runAction('message-history...', Array)
+#5 [internal function]: frontend\controllers\SentListController->actionCreate()
+#6 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#9 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('sent-list/creat...', Array)
+#10 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#12 {main}
+2017-11-22 09:32:48 [::1][14][-][info][application] $_GET = [
+    'r' => 'sent-list/create'
+]
+
+$_POST = [
+    'keylist' => [
+        0 => '44'
+        1 => '45'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    '_csrf' => '438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn\";}'
+    'SQLiteManager_currentLangue' => '2'
+    'PHPSESSID' => '27b2ca10c8ded48d7529d11cee83db01'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'grou_id' => '24'
+    'sent_list_id' => 'sent_5a1536306c296'
+    'history_id' => 'hist_5a1536306e395'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '33'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_X_CSRF_TOKEN' => 'VmRVcGhjOGsJNR5HMAxAERMLZRkGDQ8RCRYvMwk8VAY8CQM3XAxwBQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/2017-10-23-messej/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; _csrf=438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn%22%3B%7D; SQLiteManager_currentLangue=2; PHPSESSID=27b2ca10c8ded48d7529d11cee83db01; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '60601'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=sent-list%2Fcreate'
+    'REQUEST_URI' => '/messej/2017-10-23-messej/index.php?r=sent-list%2Fcreate'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511339568.42
+    'REQUEST_TIME' => 1511339568
+    'argv' => [
+        0 => 'r=sent-list%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-11-22 09:32:53 [::1][14][27b2ca10c8ded48d7529d11cee83db01][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: params' in /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Controller.php:93
+Stack trace:
+#0 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('recipients', Array)
+#3 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('recipient-list/...', Array)
+#4 /Applications/MAMP/htdocs/messej/2017-10-23-messej/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 /Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php(18): yii\base\Application->run()
+#6 {main}
+2017-11-22 09:32:53 [::1][14][27b2ca10c8ded48d7529d11cee83db01][info][application] $_GET = [
+    'r' => 'recipient-list/recipients'
+    'scenario' => 'RECIPIENTS'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    '_csrf' => '438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn\";}'
+    'SQLiteManager_currentLangue' => '2'
+    'PHPSESSID' => '27b2ca10c8ded48d7529d11cee83db01'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'grou_id' => '24'
+    'sent_list_id' => 'sent_5a1536306c296'
+    'history_id' => 'hist_5a1536306e395'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'msg_id' => 'msg_5a15363570d47'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Mobile Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/messej/2017-10-23-messej/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; _csrf=438a6891caaf341fac201dcb47d91f7f362fa16c40ba80951645db430a162d5ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_QK7XoxzEo0inn7z_rzCa_lmjmVG4oHn%22%3B%7D; SQLiteManager_currentLangue=2; PHPSESSID=27b2ca10c8ded48d7529d11cee83db01; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/messej/2017-10-23-messej/index.php'
+    'REMOTE_PORT' => '60601'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS'
+    'REQUEST_URI' => '/messej/2017-10-23-messej/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS'
+    'SCRIPT_NAME' => '/messej/2017-10-23-messej/index.php'
+    'PHP_SELF' => '/messej/2017-10-23-messej/index.php'
+    'REQUEST_TIME_FLOAT' => 1511339573.48
+    'REQUEST_TIME' => 1511339573
+    'argv' => [
+        0 => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS'
+    ]
+    'argc' => 1
+]

@@ -28,11 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-<<<<<<< HEAD
         'brandLabel' => 'smsHailer',
-=======
-        'brandLabel' => 'SMS Messenger',
->>>>>>> 9a5d037ecaefd437086ab152bb39e65a1bb35e47
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'user_def_navbar navbar-inverse navbar-fixed-top',
@@ -44,13 +40,8 @@ AppAsset::register($this);
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-<<<<<<< HEAD
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-=======
         $menuItems[] = ['label' => 'Register', 'url' => ['/site/signup']];
         //$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
->>>>>>> 9a5d037ecaefd437086ab152bb39e65a1bb35e47
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

@@ -88,7 +88,6 @@ class MessageController extends Controller
         //print_r($currently_selected_group_name['group_name']);
 
 
-
         //generating a random uniqe ID with thr prefix 'msg_'
         $random_msg_id = uniqid("msg_");
 
