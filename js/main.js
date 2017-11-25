@@ -60,7 +60,7 @@ $('#msg_send_button').click(
 
 		var message = document.getElementById('user_msg_input').value;
 		var selected_recipient_id = $('#recipient_list_grid').yiiGridView('getSelectedRows'); // returns an array of pkeys, and #grid is your grid element id
-		alert(selected_recipient_id);
+		//alert(selected_recipient_id);
 
 		if (message){
 
@@ -68,16 +68,16 @@ $('#msg_send_button').click(
 				//alert('selected_recipient_id')
 				//url: "<?php echo Url::to (['sent-list/test'], true); ?>",
 				//url: "?r=sent-list%2Ftest",
-				url: "?r=sent-list%2Fcreate",
+				url: "?r=sent-list%2Fgetrecipientids",
 				type: "POST",
 				//dataType: 'Json',
 				data: {'keylist': selected_recipient_id},
 
 				success: function(data, textStatus, jqXHR) {
-					alert('Message Sent');
+					//alert('Message Sent');
 				},
 				error: function(jqXHR, textStatus, errorThrown, data) {
-					alert('error::'+errorThrown+' '+textStatus+' '+jqXHR+data);
+					//alert('error::'+errorThrown+' '+ JSON.stringify(textStatus)+' '+JSON.stringify(jqXHR) + JSON.stringify(data));
 				},
 
 			});

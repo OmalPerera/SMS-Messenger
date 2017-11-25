@@ -73,6 +73,15 @@ class MessageController extends Controller
      */
     public function actionCreate()
     {
+      //generating a random uniqe ID with thr prefix 'msg_'
+      $random_msg_id = uniqid("msg_");
+
+      //store the $random_msg_id in a SESSION for the use in the message-History part
+      $session_message_info = Yii::$app->session;
+      $session_message_info->open();
+      $session_message_info['msg_id'] = $random_msg_id;
+      $session_message_info->close();
+
         $session_group_id = Yii::$app->session;
         $session_group_id->open();
         $currently_selected_group_id = $session_group_id['grou_id'];
@@ -86,17 +95,6 @@ class MessageController extends Controller
         $session_group_id['group_name'] = $currently_selected_group_name;
         $session_group_id->close();
         //print_r($currently_selected_group_name['group_name']);
-
-
-        //generating a random uniqe ID with thr prefix 'msg_'
-        $random_msg_id = uniqid("msg_");
-
-        //store the $random_msg_id in a SESSION for the use in the message-History part
-        $session_message_info = Yii::$app->session;
-        $session_message_info->open();
-        $session_message_info['msg_id'] = $random_msg_id;
-        $session_message_info->close();
-
 
         $model = new Message();
         if ($model->load(Yii::$app->request->post())) {
@@ -114,9 +112,12 @@ class MessageController extends Controller
             $session_first_group_id->open();
             $redi_group_id = $session_first_group_id['group_id'];
 
-            Yii::$app->session->setFlash('success', "Message Sent Successfuly");
+            //calling to SentList/create function to create sent list record
+            Yii::$app->runAction('sent-list/create', ['message_id'=>$random_msg_id]);
+//88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+            //Yii::$app->session->setFlash('success', "Message Sent Successfuly");
 
-            return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $redi_group_id]);
+            //return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $redi_group_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
