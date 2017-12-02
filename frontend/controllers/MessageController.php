@@ -101,7 +101,7 @@ class MessageController extends Controller
             $model->message_id = $random_msg_id;
             $model->message_author_id = Yii::$app->user->identity->id;
             $model->message_create_date = date('Y-m-d H:i:s');
-            $model->message_subject = 'msg1';
+            $model->message_subject = 'msg_subject';
             $model->message_sent_group = $currently_selected_group_name['group_name'];
             $model->save();
 

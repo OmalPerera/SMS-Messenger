@@ -69,9 +69,10 @@ $('#msg_send_button').click(
 				//url: "<?php echo Url::to (['sent-list/test'], true); ?>",
 				//url: "?r=sent-list%2Ftest",
 				url: "?r=sent-list%2Fgetrecipientids",
+				//url: "http://localhost:8090/api/users",
 				type: "POST",
-				//dataType: 'Json',
-				data: {'keylist': selected_recipient_id},
+				dataType: 'Json',
+				data: {'keylist': selected_recipient_id, 'message': message},
 
 				success: function(data, textStatus, jqXHR) {
 					//alert('Message Sent');
@@ -79,30 +80,9 @@ $('#msg_send_button').click(
 				error: function(jqXHR, textStatus, errorThrown, data) {
 					//alert('error::'+errorThrown+' '+ JSON.stringify(textStatus)+' '+JSON.stringify(jqXHR) + JSON.stringify(data));
 				},
-
 			});
-
-
-			/*
-			$.ajax({
-
-			url: "?r=message-history%2Fcreate",
-			type: "POST",
-			//dataType: 'Json',
-			data: {'keylist': selected_recipient_id},
-
-			success: function(data, textStatus, jqXHR) {
-			alert('Message Sent')
-		},
-		error: function(jqXHR, textStatus, errorThrown, data) {
-		alert('error::'+errorThrown+' '+textStatus+' '+jqXHR+data)
-	},
-
-});
-*/
-
-}else{
-	alert('Please Enter a Valid Message');
-}
-}
+		}else{
+			alert('Please Enter a Valid Message');
+		}
+	}
 );

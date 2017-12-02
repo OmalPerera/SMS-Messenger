@@ -80,6 +80,9 @@ class SentListController extends Controller
           $data = Yii::$app->request->post();
 
           $recipient_id = implode(",",$data['keylist']);
+          $msgToBeSent = $data['message'];
+
+          //Yii::$app->session->setFlash('success', $msgToBeSent);
 
           //convertint Recipient IDs to Phone numbers
           //$searchModel = new RecipientListSearch();
@@ -89,7 +92,7 @@ class SentListController extends Controller
           $session_message_info->open();
           //store the $random_sent_list_id in a SESSION
           $session_message_info['recipient_id'] = $recipient_id; //$dataProvider;
-          //$session_message_info['recipient_mn'] = '0717074657';
+          $session_message_info['recipient_mn'] = $msgToBeSent;
           $session_message_info->close();
 
           //throw new NotFoundHttpException($recipient_id);
@@ -121,6 +124,10 @@ class SentListController extends Controller
       $model->recipient_phone_number = $recipient_id;
       $model->save();
 
+      $messageToBeSent = $session_message_info['recipient_mn'];
+      $this->sendDataToSmsGatewayApp($messageToBeSent, $recipient_id);
+      //Yii::$app->session->setFlash('success', $abc);
+
       //+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++
       $delivery_id = 'deli_5767fa02de5ff';
       $session_message_info->close();
@@ -128,6 +135,35 @@ class SentListController extends Controller
       Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
 
     }
+
+    /*
+    sending data to an external SMS gateway
+    Sample URL : http://localhost:8090/api/users
+    */
+    public function sendDataToSmsGatewayApp($message, $phoneNumbers)
+    {
+      $url = 'http://localhost:8090/api/users';
+      $dataContent = array('message' => $message, 'phoneNumbers' => $phoneNumbers);
+      $data = json_encode($dataContent);
+
+      $options = array(
+          'http' => array(
+              'header'  => "Content-Type: application/json\r\n",
+              'method'  => 'POST',
+              'content' => $data
+          )
+      );
+      $context  = stream_context_create($options);
+      $result = file_get_contents($url, false, $context);
+
+      if ($result === FALSE) {
+        Yii::$app->session->setFlash('error', "There was a problem in Sending Messege : ". $result);
+      }else{
+        Yii::$app->session->setFlash('success', "Message Sent Successfuly : ". $result);
+      }
+    }
+
+
 
     /**
      * Updates an existing SentList model.

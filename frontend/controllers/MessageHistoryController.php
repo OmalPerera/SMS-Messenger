@@ -95,7 +95,9 @@ class MessageHistoryController extends Controller
                 $model->delivery_id = $delivery_id;
                 $model->save();
 
-                Yii::$app->session->setFlash('success', "Message Sent Successfuly");
+
+
+                //Yii::$app->session->setFlash('success', "Message Sent Successfuly");
 
                 //redirecting page after sending the message
                 $session_first_group_id = Yii::$app->session;
