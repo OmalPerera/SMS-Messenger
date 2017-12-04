@@ -18,9 +18,6 @@ use yii\db\Query;
 class SentListController extends Controller
 {
 
-
-
-
     public function behaviors()
     {
         return [
@@ -82,6 +79,7 @@ class SentListController extends Controller
           $recipient_id = implode(",",$data['keylist']);
           $msgToBeSent = $data['message'];
 
+          $this->actionMapPhoneNumbersForRecipientID();
           //Yii::$app->session->setFlash('success', $msgToBeSent);
 
           //convertint Recipient IDs to Phone numbers
@@ -99,6 +97,14 @@ class SentListController extends Controller
         }else {
           throw new NotFoundHttpException('Problem with Retrieving Recipients.');
         }
+    }
+
+
+
+    public function actionMapPhoneNumbersForRecipientID(){
+      $sampleSentID = "sent_5a17e8f279586";
+      
+      $searchModel = new SentListSearch();
     }
 
     /**
@@ -128,6 +134,7 @@ class SentListController extends Controller
       $isSuccessfullySent = $this->sendDataToSmsGatewayApp($messageToBeSent, $recipient_id);
       $session_message_info->close();
 
+      //LOGIC : if successfullty sent the msg, sve it to history, unless refresh the page
       if($isSuccessfullySent) {
         //+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++
         $delivery_id = 'deli_5767fa02de5ff';
@@ -167,7 +174,7 @@ class SentListController extends Controller
       $result = @file_get_contents($url, false, $context);
 
       if ($result === FALSE) {
-        Yii::$app->session->setFlash('msg-sent-failed', "There was a problem in Sending Messege");
+        Yii::$app->session->setFlash('msg-sent-failed', "Problem in Sending Messege or SMS Gateway");
         return false;
       }else{
         Yii::$app->session->setFlash('success', "Message Sent Successfuly : ". $result);
@@ -175,7 +182,6 @@ class SentListController extends Controller
       }
 
     }
-
 
 
     /**

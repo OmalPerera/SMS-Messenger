@@ -52856,3 +52856,76 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2017-12-04 09:13:50 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "dent-list".' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('dent-list', Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php:96
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#2 {main}
+2017-12-04 09:13:50 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'dent-list'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '45,46'
+    'recipient_mn' => 'ssssssssss'
+    'msg_id' => 'msg_5a25033828313'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24ffd872776'
+    'history_id' => 'hist_5a24ffd876195'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '60150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dent-list'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=dent-list'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512375230.88
+    'REQUEST_TIME' => 1512375230
+    'argv' => [
+        0 => 'r=dent-list'
+    ]
+    'argc' => 1
+]
