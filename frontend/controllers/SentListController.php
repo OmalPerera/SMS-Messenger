@@ -105,6 +105,7 @@ class SentListController extends Controller
       $sampleSentID = "sent_5a17e8f279586";
       
       $searchModel = new SentListSearch();
+      $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
     }
 
     /**
