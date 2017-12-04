@@ -125,14 +125,22 @@ class SentListController extends Controller
       $model->save();
 
       $messageToBeSent = $session_message_info['recipient_mn'];
-      $this->sendDataToSmsGatewayApp($messageToBeSent, $recipient_id);
-      //Yii::$app->session->setFlash('success', $abc);
-
-      //+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++
-      $delivery_id = 'deli_5767fa02de5ff';
+      $isSuccessfullySent = $this->sendDataToSmsGatewayApp($messageToBeSent, $recipient_id);
       $session_message_info->close();
 
-      Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
+      if($isSuccessfullySent) {
+        //+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++
+        $delivery_id = 'deli_5767fa02de5ff';
+
+        Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
+      }else {
+        //redirecting page after sending the message
+        $session_first_group_id = Yii::$app->session;
+        $session_first_group_id->open();
+        $redi_group_id = $session_first_group_id['group_id'];
+
+        return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $redi_group_id]);
+      }
 
     }
 
@@ -154,13 +162,18 @@ class SentListController extends Controller
           )
       );
       $context  = stream_context_create($options);
-      $result = file_get_contents($url, false, $context);
+
+
+      $result = @file_get_contents($url, false, $context);
 
       if ($result === FALSE) {
-        Yii::$app->session->setFlash('error', "There was a problem in Sending Messege : ". $result);
+        Yii::$app->session->setFlash('msg-sent-failed', "There was a problem in Sending Messege");
+        return false;
       }else{
         Yii::$app->session->setFlash('success', "Message Sent Successfuly : ". $result);
+        return true;
       }
+
     }
 
 

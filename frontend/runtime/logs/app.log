@@ -52099,3 +52099,760 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2017-12-04 03:48:41 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'file_get_contents(http://localhost:8090/api/users): failed to open stream: Connection refused' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:157
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/Applications/M...', 157, Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(157): file_get_contents('http://localhos...', false, Resource id #5)
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(128): frontend\controllers\SentListController->sendDataToSmsGatewayApp('httty', '45,46')
+#3 [internal function]: frontend\controllers\SentListController->actionCreate('msg_5a24b789e32...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/MessageController.php(116): yii\base\Module->runAction('sent-list/creat...', Array)
+#8 [internal function]: frontend\controllers\MessageController->actionCreate()
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('message/create', Array)
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#15 {main}
+2017-12-04 03:48:41 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'message/create'
+]
+
+$_POST = [
+    '_csrf' => 'SEtzTmRJaHcKOUsDXH1QNjh.AXlVBBgZOR4/KDQoA0ACfDU5NSgLQw=='
+    'Message' => [
+        'message_body' => 'httty'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '45,46'
+    'recipient_mn' => 'httty'
+    'msg_id' => 'msg_5a24b789e32a2'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24b789e63ed'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '100'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '49699'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=message%2Fcreate'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512355721.91
+    'REQUEST_TIME' => 1512355721
+    'argv' => [
+        0 => 'r=message%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-12-04 05:04:56 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ';'' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:163
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-12-04 05:04:56 [::1][-][-][info][application] $_GET = [
+    'r' => 'sent-list/getrecipientids'
+]
+
+$_POST = [
+    'keylist' => [
+        0 => '44'
+        1 => '45'
+    ]
+    'message' => 'hjhjfgfddssds'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '55'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_X_CSRF_TOKEN' => 'TUhUZ3ZDWWwPOmwqTndhLT19JlBHDikCPB0YASYiMlsHfxIQJyI6WA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50083'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=sent-list%2Fgetrecipientids'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/?r=sent-list%2Fgetrecipientids'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512360296.12
+    'REQUEST_TIME' => 1512360296
+    'argv' => [
+        0 => 'r=sent-list%2Fgetrecipientids'
+    ]
+    'argc' => 1
+]
+2017-12-04 05:04:56 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ';'' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:163
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-12-04 05:04:56 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'message/create'
+]
+
+$_POST = [
+    '_csrf' => 'TUhUZ3ZDWWwPOmwqTndhLT19JlBHDikCPB0YASYiMlsHfxIQJyI6WA=='
+    'Message' => [
+        'message_body' => 'hjhjfgfddssds'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '45,46'
+    'recipient_mn' => 'httty'
+    'msg_id' => 'msg_5a24c96857fe9'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24b789e63ed'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '106'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50084'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=message%2Fcreate'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512360296.34
+    'REQUEST_TIME' => 1512360296
+    'argv' => [
+        0 => 'r=message%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-12-04 05:05:29 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'fsockopen(): unable to connect to 127.0.0.1:8090 (Connection refused)' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:159
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'fsockopen(): un...', '/Applications/M...', 159, Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(159): fsockopen('127.0.0.1', '8090', '<span class="nu...', '<span class="st...', 60)
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(128): frontend\controllers\SentListController->sendDataToSmsGatewayApp('asasaqaawwqeaa', '46')
+#3 [internal function]: frontend\controllers\SentListController->actionCreate('msg_5a24c989242...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/MessageController.php(116): yii\base\Module->runAction('sent-list/creat...', Array)
+#8 [internal function]: frontend\controllers\MessageController->actionCreate()
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('message/create', Array)
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#15 {main}
+2017-12-04 05:05:29 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'message/create'
+]
+
+$_POST = [
+    '_csrf' => 'ZlB2aGZLTGgkIk4lXn90KRZlBF9XBjwGFwU6DjYqJ18sZzAfNyovXA=='
+    'Message' => [
+        'message_body' => 'asasaqaawwqeaa'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '46'
+    'recipient_mn' => 'asasaqaawwqeaa'
+    'msg_id' => 'msg_5a24c989242a0'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24c98927067'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '107'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50091'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=message%2Fcreate'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512360329.13
+    'REQUEST_TIME' => 1512360329
+    'argv' => [
+        0 => 'r=message%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-12-04 07:07:56 [::1][14][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/smsHailer/2017-12-03/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('yii\\widgets\\Pja...')
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/widgets/Pjax.php(195): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/widgets/Pjax.php(136): yii\widgets\Pjax->registerClientScript()
+#8 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Widget.php(73): yii\widgets\Pjax->run()
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/views/recipient-list/index.php(80): yii\base\Widget::end()
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\RecipientListController))
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\RecipientListController))
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/RecipientListController.php(68): yii\base\Controller->render('index', Array)
+#15 [internal function]: frontend\controllers\RecipientListController->actionRecipients('24')
+#16 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('recipients', Array)
+#19 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('recipient-list/...', Array)
+#20 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#22 {main}
+2017-12-04 07:07:56 [::1][14][-][info][application] $_GET = [
+    'r' => 'recipient-list/recipients'
+    'scenario' => 'RECIPIENTS'
+    'params' => '24'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '46'
+    'recipient_mn' => 'asasaqaawwqeaa'
+    'msg_id' => 'msg_5a24c989242a0'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24c98927067'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512367676.85
+    'REQUEST_TIME' => 1512367676
+    'argv' => [
+        0 => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    ]
+    'argc' => 1
+]
+2017-12-04 07:08:02 [::1][14][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/smsHailer/2017-12-03/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('yii\\widgets\\Pja...')
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/widgets/Pjax.php(195): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/widgets/Pjax.php(136): yii\widgets\Pjax->registerClientScript()
+#8 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Widget.php(73): yii\widgets\Pjax->run()
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/views/recipient-list/index.php(80): yii\base\Widget::end()
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\RecipientListController))
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\RecipientListController))
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/RecipientListController.php(68): yii\base\Controller->render('index', Array)
+#15 [internal function]: frontend\controllers\RecipientListController->actionRecipients('24')
+#16 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#17 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('recipients', Array)
+#19 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('recipient-list/...', Array)
+#20 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#22 {main}
+2017-12-04 07:08:02 [::1][14][-][info][application] $_GET = [
+    'r' => 'recipient-list/recipients'
+    'scenario' => 'RECIPIENTS'
+    'params' => '24'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '46'
+    'recipient_mn' => 'asasaqaawwqeaa'
+    'msg_id' => 'msg_5a24c989242a0'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24c98927067'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50257'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512367682.5
+    'REQUEST_TIME' => 1512367682
+    'argv' => [
+        0 => 'r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    ]
+    'argc' => 1
+]
+2017-12-04 07:08:26 [::1][14][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /Applications/MAMP/htdocs/smsHailer/2017-12-03/vendor/yiisoft/yii2/assets' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(179): yii\web\AssetManager->publish('/Applications/M...', Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('frontend\\assets...')
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(325): require('/Applications/M...')
+#8 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/Applications/M...', Array)
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(392): yii\base\View->renderFile('/Applications/M...', Array, Object(frontend\controllers\SiteController))
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\Controller->renderContent('\n<div class="ch...')
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SiteController.php(144): yii\base\Controller->render('introduction')
+#12 [internal function]: frontend\controllers\SiteController->actionIndex()
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#16 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('', Array)
+#17 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#19 {main}
+2017-12-04 07:08:26 [::1][14][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '46'
+    'recipient_mn' => 'asasaqaawwqeaa'
+    'msg_id' => 'msg_5a24c989242a0'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24c98927067'
+    24 => '24'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50264'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/smsHailer/2017-12-04/'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512367706.38
+    'REQUEST_TIME' => 1512367706
+    'argv' => []
+    'argc' => 0
+]
+2017-12-04 07:10:49 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'file_get_contents(http://localhost:8090/api/users): failed to open stream: Connection refused' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:161
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'file_get_conten...', '/Applications/M...', 161, Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(161): file_get_contents('http://localhos...', false, Resource id #5)
+#2 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(128): frontend\controllers\SentListController->sendDataToSmsGatewayApp('llllllll', '44,45')
+#3 [internal function]: frontend\controllers\SentListController->actionCreate('msg_5a24e6e965a...')
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/MessageController.php(116): yii\base\Module->runAction('sent-list/creat...', Array)
+#8 [internal function]: frontend\controllers\MessageController->actionCreate()
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('message/create', Array)
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#15 {main}
+2017-12-04 07:10:49 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'message/create'
+]
+
+$_POST = [
+    '_csrf' => 'WGYzT1A0SjgaFAsCaAByeShTQXhheTpWKTN/KQBVIQ8SUXU4AVUpDA=='
+    'Message' => [
+        'message_body' => 'llllllll'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '44,45'
+    'recipient_mn' => 'llllllll'
+    'msg_id' => 'msg_5a24e6e965a3c'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24e6e9688f1'
+    'history_id' => 'hist_5a24e68a3ffa1'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '103'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '50296'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=message%2Fcreate'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512367849.4
+    'REQUEST_TIME' => 1512367849
+    'argv' => [
+        0 => 'r=message%2Fcreate'
+    ]
+    'argc' => 1
+]
+2017-12-04 08:55:15 [::1][14][3786d1627beb88a6e3576eefca98d5a3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant ture - assumed 'ture'' in /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php:176
+Stack trace:
+#0 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(176): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/Applications/M...', 176, Array)
+#1 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/SentListController.php(128): frontend\controllers\SentListController->sendDataToSmsGatewayApp('qqqqqqqqqqqq', '44')
+#2 [internal function]: frontend\controllers\SentListController->actionCreate('msg_5a24ff63bfb...')
+#3 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#6 /Applications/MAMP/htdocs/smsHailer/2017-12-04/frontend/controllers/MessageController.php(116): yii\base\Module->runAction('sent-list/creat...', Array)
+#7 [internal function]: frontend\controllers\MessageController->actionCreate()
+#8 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('create', Array)
+#11 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('message/create', Array)
+#12 /Applications/MAMP/htdocs/smsHailer/2017-12-04/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php(18): yii\base\Application->run()
+#14 {main}
+2017-12-04 08:55:15 [::1][14][3786d1627beb88a6e3576eefca98d5a3][info][application] $_GET = [
+    'r' => 'message/create'
+]
+
+$_POST = [
+    '_csrf' => 'QnZEeERxR3UABHw1fEV/NDJDNk91PDcbMyMIHhQQLEIIQQIPFRAkQQ=='
+    'Message' => [
+        'message_body' => 'qqqqqqqqqqqq'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.51254817.1508414278'
+    'SQLiteManager_currentLangue' => '2'
+    '_csrf' => 'bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Br8M848Ap5r71MpnqULfPak7J7FwQac4\";}'
+    'PHPSESSID' => '3786d1627beb88a6e3576eefca98d5a3'
+    '_identity' => '38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a:2:{i:0;s:9:\"_identity\";i:1;s:47:\"[14,\"vsViqlx0YCvqdacglEz1B5PXwOKu4KF5\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'success' => -1
+    ]
+    '__id' => 14
+    'group_id' => '24'
+    'grou_id' => '24'
+    'recipient_id' => '44'
+    'recipient_mn' => 'qqqqqqqqqqqq'
+    'msg_id' => 'msg_5a24ff63bfbc1'
+    'group_name' => [
+        'group_name' => 'Besties'
+    ]
+    'sent_list_id' => 'sent_5a24ff63c2b5b'
+    'history_id' => 'hist_5a24ef774bb83'
+    'success' => 'Message Sent Successfuly : success'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '107'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost:8888'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost:8888/smsHailer/2017-12-04/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=24'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.51254817.1508414278; SQLiteManager_currentLangue=2; _csrf=bb981c58302d18bc7d37e974c914611dd956a314d3499a1fc69cbdf7861bdd51a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Br8M848Ap5r71MpnqULfPak7J7FwQac4%22%3B%7D; PHPSESSID=3786d1627beb88a6e3576eefca98d5a3; _identity=38bb639657724be325b6e6c3cf4b6517187c7ec12d3db46f40b91d41987b4dd2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A47%3A%22%5B14%2C%22vsViqlx0YCvqdacglEz1B5PXwOKu4KF5%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.29 (Unix) mod_wsgi/3.5 Python/2.7.10 PHP/5.6.10 mod_ssl/2.2.29 OpenSSL/0.9.8zh DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.22.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/MAMP/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/MAMP/htdocs/smsHailer/2017-12-04/index.php'
+    'REMOTE_PORT' => '60060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=message%2Fcreate'
+    'REQUEST_URI' => '/smsHailer/2017-12-04/index.php?r=message%2Fcreate'
+    'SCRIPT_NAME' => '/smsHailer/2017-12-04/index.php'
+    'PHP_SELF' => '/smsHailer/2017-12-04/index.php'
+    'REQUEST_TIME_FLOAT' => 1512374115.77
+    'REQUEST_TIME' => 1512374115
+    'argv' => [
+        0 => 'r=message%2Fcreate'
+    ]
+    'argc' => 1
+]
