@@ -46,13 +46,13 @@ class RecipientListSearch extends RecipientList
      */
 
 
-    /** 
+    /**
     *   +++++++++++++++++++++++++++++++++++++ NOTE ++++++++++++++++++++++++++++++++++++++++++
     *
     *   # This PHP for search the recipient list according to groups.
     *   # RecipientList Table stucture
     *       | recipient_list_id | group_id | recipient_name | recipient_phone_number |
-    *   
+    *
     *   # So when user clicks on a grid item of Groups (a URL will creates & navigates to it)
     *       Example URL : .../frontend/web/index.php?r=recipient-list%2Frecipients&scenario=RECIPIENTS&params=6
     *           # last digit says the group id.
@@ -70,7 +70,7 @@ class RecipientListSearch extends RecipientList
     *
     *       # Then use an if condition to check the value in $isGroupOwnedByLoggedUser
     *           -> if true -- navigates to the recipient list
-    *           -> if false -- navigates to the 404 PAGE NOT FOUND 
+    *           -> if false -- navigates to the 404 PAGE NOT FOUND
     */
 
 
@@ -79,13 +79,13 @@ class RecipientListSearch extends RecipientList
 
     public function search($params)
     {
-        
+
         $current_logged_user_id = Yii::$app->user->identity->id; //get the id of the current user
         $group_id = $params['params'];
 
             $valid_groups_id_query = new Query;
             $valid_groups_id_query  ->select('group_id')
-                                    ->from('user_group')                               
+                                    ->from('user_group')
                                     ->where(['group_owner_id' => $current_logged_user_id]);
 
             $group_id_array = $valid_groups_id_query->all();
@@ -95,7 +95,7 @@ class RecipientListSearch extends RecipientList
 
         $isGroupOwnedByLoggedUser = false;
         foreach ($group_id_array as $value) {
-            
+
             if($group_id == $value['group_id']){
                 $isGroupOwnedByLoggedUser = true;
             }
@@ -134,9 +134,23 @@ class RecipientListSearch extends RecipientList
                 ->andFilterWhere(['like', 'recipient_phone_number', $this->recipient_phone_number]);
 
             return $dataProvider;
-            
-        }
 
-        
+        }
+    }
+
+
+    public function converttomobilenumber($selectedIds){
+      $recipientId = '30'; //should use a loop to get seperate id form selectedIds
+
+      $query = RecipientList::find()
+      ->where(['recipient_list_id' => $recipientId]);
+
+      $dataProvider = new ActiveDataProvider([
+          'query' => $query,
+          //'pagination' => ['pageSize' => 5,],
+      ]);
+      $dataProvider = 'abc';
+      return $dataProvider;
+
     }
 }

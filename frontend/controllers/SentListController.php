@@ -71,65 +71,99 @@ class SentListController extends Controller
         ]);
     }
 
+
+
+    /*gettig the recipient list from Ajax code in js/main.js on SEND button click*/
+    public function actionGetrecipientids()
+    {
+      if (Yii::$app->request->isAjax) {
+          $data = Yii::$app->request->post();
+
+          $recipient_id = implode(",",$data['keylist']);
+          $msgToBeSent = $data['message'];
+
+          //Yii::$app->session->setFlash('success', $msgToBeSent);
+
+          //convertint Recipient IDs to Phone numbers
+          //$searchModel = new RecipientListSearch();
+          //$dataProvider = $searchModel->converttomobilenumber($recipient_id);
+
+          $session_message_info = Yii::$app->session;
+          $session_message_info->open();
+          //store the $random_sent_list_id in a SESSION
+          $session_message_info['recipient_id'] = $recipient_id; //$dataProvider;
+          $session_message_info['recipient_mn'] = $msgToBeSent;
+          $session_message_info->close();
+
+          //throw new NotFoundHttpException($recipient_id);
+        }else {
+          throw new NotFoundHttpException('Problem with Retrieving Recipients.');
+        }
+    }
+
     /**
      * Creates a new SentList model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
 
-    public function actionCreate()
+    public function actionCreate($message_id)
     {
-        if (Yii::$app->request->isAjax) {
-            $data = Yii::$app->request->post();
-            //print_r($data['keylist']['0']);
-            //$recipient_id = $data['keylist']['0'];
-            //echo $recipient_id;
 
-            $recipient_id = implode(",",$data['keylist']);
-            //echo $recipient_id;
+      //generating a random uniqe ID with thr prefix 'sent_'
+      $random_sent_list_id = uniqid("sent_");
 
+      $session_message_info = Yii::$app->session;
+      $session_message_info->open();
+      //store the $random_sent_list_id in a SESSION
+      $session_message_info['sent_list_id'] = $random_sent_list_id;
+      $recipient_id = $session_message_info['recipient_id'];
 
-            //generating a random uniqe ID with thr prefix 'sent_'
-            $random_sent_list_id = uniqid("sent_");
+      $model = new SentList();
+      $model->sent_list_id = $random_sent_list_id;
+      $model->recipient_phone_number = $recipient_id;
+      $model->save();
 
-            $session_message_info = Yii::$app->session;
-            $session_message_info->open();
-            //store the $random_sent_list_id in a SESSION
-            $session_message_info['sent_list_id'] = $random_sent_list_id;
+      $messageToBeSent = $session_message_info['recipient_mn'];
+      $this->sendDataToSmsGatewayApp($messageToBeSent, $recipient_id);
+      //Yii::$app->session->setFlash('success', $abc);
 
-            $message_id = $session_message_info['msg_id'];
-            /*+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++*/
-            $delivery_id = 'deli_5767fa02de5ff';
-            $session_message_info->close();
+      //+++++++++++++++++ msg delivevery id is hardcoded, because that part is not completed +++++++++
+      $delivery_id = 'deli_5767fa02de5ff';
+      $session_message_info->close();
 
-
-            $model = new SentList();
-            $model->sent_list_id = $random_sent_list_id;
-            $model->recipient_phone_number = $recipient_id;
-            $model->save();
-
-
-            Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
-
-
-
-        }
-
- /*       $model = new SentList();
-
-        if ($model->load(Yii::$app->request->post())) {
-            $model->recipient_phone_number = $data;
-            $model->save();
-
-            return $this->redirect(['view', 'id' => $model->sent_list_id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-        */
+      Yii::$app->runAction('message-history/create', ['message_id'=>$message_id, 'sentlist_id'=>$random_sent_list_id, 'delivery_id'=>$delivery_id]);
 
     }
+
+    /*
+    sending data to an external SMS gateway
+    Sample URL : http://localhost:8090/api/users
+    */
+    public function sendDataToSmsGatewayApp($message, $phoneNumbers)
+    {
+      $url = 'http://localhost:8090/api/users';
+      $dataContent = array('message' => $message, 'phoneNumbers' => $phoneNumbers);
+      $data = json_encode($dataContent);
+
+      $options = array(
+          'http' => array(
+              'header'  => "Content-Type: application/json\r\n",
+              'method'  => 'POST',
+              'content' => $data
+          )
+      );
+      $context  = stream_context_create($options);
+      $result = file_get_contents($url, false, $context);
+
+      if ($result === FALSE) {
+        Yii::$app->session->setFlash('error', "There was a problem in Sending Messege : ". $result);
+      }else{
+        Yii::$app->session->setFlash('success', "Message Sent Successfuly : ". $result);
+      }
+    }
+
+
 
     /**
      * Updates an existing SentList model.

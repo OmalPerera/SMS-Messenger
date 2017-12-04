@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'SMS Messenger',
+        'brandLabel' => 'smsHailer',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'user_def_navbar navbar-inverse navbar-fixed-top',

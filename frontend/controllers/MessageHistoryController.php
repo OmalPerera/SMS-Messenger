@@ -77,20 +77,15 @@ class MessageHistoryController extends Controller
         //store the $history_id in a SESSION
         $session_message_info['history_id'] = $history_id;
         $session_message_info->close();
+        //$message_id = 'msg_5a180ac964b30';
 
-
-
-        if( isset($message_id) 
-            && isset($sentlist_id) 
-            && isset($delivery_id) 
-            && !empty($message_id) 
-            && !empty($sentlist_id) 
+        if( isset($message_id)
+            && isset($sentlist_id)
+            && isset($delivery_id)
+            && !empty($message_id)
+            && !empty($sentlist_id)
             && !empty($delivery_id)
             ){
-
-                //echo $message_id;
-                //echo $sentlist_id;
-                //echo $delivery_id;
 
                 $model = new MessageHistory();
 
@@ -101,8 +96,18 @@ class MessageHistoryController extends Controller
                 $model->save();
 
 
+
+                //Yii::$app->session->setFlash('success', "Message Sent Successfuly");
+
+                //redirecting page after sending the message
+                $session_first_group_id = Yii::$app->session;
+                $session_first_group_id->open();
+                $redi_group_id = $session_first_group_id['group_id'];
+
+                return $this->redirect(['/recipient-list/recipients', 'scenario' => 'RECIPIENTS' ,'params' => $redi_group_id]);
+
         }else{
-            throw new NotFoundHttpException('Some data were missed');
+          throw new NotFoundHttpException('Some data were missed');
         }
     }
 
