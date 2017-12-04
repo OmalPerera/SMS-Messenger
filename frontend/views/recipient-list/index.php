@@ -24,9 +24,17 @@ $this->params['breadcrumbs'][] = $this->title;
 
   <!--displaying alert after sending the message-->
   <?php if (Yii::$app->session->hasFlash('success')): ?>
-    <div class="alert alert-info alert-dismissable" style="height: 30px; line-height:30px; padding:0px 20px;">
+    <div class="alert alert-success alert-dismissable" > <!-- style="height: 30px; line-height:30px; padding:0px 20px;" -->
       <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
       <?= Yii::$app->session->getFlash('success') ?>
+    </div>
+  <?php endif; ?>
+
+  <!--displaying alert if message sent is failed-->
+  <?php if (Yii::$app->session->hasFlash('msg-sent-failed')): ?>
+    <div class="alert alert-danger alert-dismissable" > <!-- style="height: 30px; line-height:30px; padding:0px 20px;" -->
+      <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+      <?= Yii::$app->session->getFlash('msg-sent-failed') ?>
     </div>
   <?php endif; ?>
 
